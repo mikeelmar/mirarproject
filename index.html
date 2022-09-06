@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css" integrity="sha384-7ynz3n3tAGNUYFZD3cWe5PDcE36xj85vyFkawcF6tIwxvIecqKvfwLiaFdizhPpN" crossorigin="anonymous">
+    <link rel="icon" href="src\title-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css\index-style.css">
+    <link rel="stylesheet" href="css\nav-style.css">
+    <link rel="stylesheet" href="css\scrollbar-style.css">
+    <link rel="stylesheet" href="css\movies-grid.css">
+    <link rel="stylesheet" href="css/modal-style.css">
+    <title>Mirar  |  Home</title>
+</head>
+<body>
+    <!-- nav style changes after it intersects with this div -->
+    <div class="scroll-trigger1"></div>
+    <header class="home-header">
+        <!-- Navigation bar -->
+        <nav class="nav-bar">
+            <div>
+                <a class="logo" href="index.html">Mirar</a>
+            </div>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="webpages/about.html">About</a></li>
+                <li class="dropdown-title" id="title1"><p>Browse</p>
+                    <div class="arrow-up" id="dropdown-menu1-arrow" name="dropdown" ></div>
+                    <div class="dropdown" id="dropdown-menu1">
+                        <ul class="dropdown-menu1-list">
+                            <li><a href="webpages/browse/movies-list.html">Movies</a></li>
+                            <li><a href="webpages/browse/series-list.html">Series</a></li>
+                            <li><a href="webpages/browse/available-in-cd-list.html">Available in CD</a></li>
+                            <hr class="hr-text" data-content="GENRES">
+                            <li><a href="webpages/browse/genre-action.html">Action</a></li>
+                            <li><a href="webpages/browse/genre-adventure.html">Adventure</a></li>
+                            <li><a href="webpages/browse/genre-animation.html">Animation</a></li>
+                            <li><a href="webpages/browse/genre-biography.html">Biography</a></li>
+                            <li><a href="webpages/browse/genre-comedy.html">Comedy</a></li>
+                            <li><a href="webpages/browse/genre-crime.html">Crime</a></li>
+                            <li><a href="webpages/browse/genre-drama.html">Drama</a></li>
+                            <li><a href="webpages/browse/genre-family.html">Family</a></li>
+                            <li><a href="webpages/browse/genre-fantasy.html">Fantasy</a></li>
+                            <li><a href="webpages/browse/genre-history.html">History</a></li>
+                            <li><a href="webpages/browse/genre-horror.html">Horror</a></li>
+                            <li><a href="webpages/browse/genre-kdrama.html">K-Drama</a></li>
+                            <li><a href="webpages/browse/genre-lgbtq.html">LGBTQ+</a></li>
+                            <li><a href="webpages/browse/genre-musical.html">Musical</a></li>
+                            <li><a href="webpages/browse/genre-Mystery.html">Mystery</a></li>
+                            <li><a href="webpages/browse/genre-Romance.html">Romance</a></li>
+                            <li><a href="webpages/browse/genre-scifi.html">Sci-Fi</a></li>
+                            <li><a href="webpages/browse/genre-thriller.html">Thriller</a></li>
+                            <li><a href="webpages/browse/genre-war.html">War</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="dropdown-title" id="title2"><p>Year</p>
+                    <div class="arrow-up" id="dropdown-menu2-arrow"></div>
+                        <div class="dropdown" id="dropdown-menu2" class="nav-scrolled">
+                            <ul>
+                                <li><a href="webpages/browse/year-2021.html">2021</a></li>
+                                <li><a href="webpages/browse/year-2020.html">2020</a></li>
+                                <li><a href="webpages/browse/year-2019.html">2019</a></li>
+                                <li><a href="webpages/browse/year-2018.html">2018</a></li>
+                                <li><a href="webpages/browse/year-2017.html">2017</a></li>
+                                <li><a href="webpages/browse/year-2016.html">2016</a></li>
+                                <li><a href="webpages/browse/year-2013.html">2013</a></li>
+                                <li><a href="webpages/browse/year-2011.html">2011</a></li>
+                                <li><a href="webpages/browse/year-2010.html">2010</a></li>
+                                <li><a href="webpages/browse/year-2009.html">2009</a></li>
+                                <li><a href="webpages/browse/year-2007.html">2007</a></li>
+                                <li><a href="webpages/browse/year-2006.html">2006</a></li>
+                                <li><a href="webpages/browse/year-2005.html">2005</a></li>
+                                <li><a href="webpages/browse/year-2004.html">2004</a></li>
+                                <li><a href="webpages/browse/year-2002.html">2002</a></li>
+                                <li><a href="webpages/browse/year-2001.html">2001</a></li>
+                                <li><a href="webpages/browse/year-1998.html">1998</a></li>
+                                <li><a href="webpages/browse/year-1997.html">1997</a></li>
+                                <li><a href="webpages/browse/year-1993.html">1993</a></li>
+                            </ul>
+                        </div>
+                </li>
+            </ul>
+            <div class="search-box">
+                <input id="search-bar" type="text" placeholder="Search films or series">
+                <button class="nav-button" id="search-button" onclick="search()" type="submit">
+                    <i class="bi bi-search"></i>
+                </button>
+            </div>
+            <div class="account-menu">
+                <button class="nav-button" id="account-menu-button">
+                    <i class="bi bi-person-circle">
+                        <div class="arrow-up" id="dropdown-menu3-arrow"></div>
+                        <div class="dropdown" class="account-menu-contents" id="dropdown-menu3">
+                            <ul>
+                                <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-toggles2"></i>Settings</a></li>
+                                <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-bookmarks-fill"></i>Bookmarks</a></li>
+                                <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-book-fill"></i>History</a></li>
+                                <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-cart-check-fill"></i>Purchased and Rented</a></li>
+                                <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-cart4"></i>Shopping Cart</a></li>
+                                <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-box-arrow-in-right"></i>Sign-in</a></li>
+                                <hr id="account-menu-contents-separator"/>
+                                <li><a href="webpages/new-account.html"><i class="bi bi-person-fill"></i>Sign-up</a></li>
+                            </ul>
+                        </div>
+                    </i>
+                </button>
+            </div>
+        </nav>
+        <!-- Highligh movie trailer -->
+        <div class="trailer-container">
+            <div class="video-container">
+                <video id="trailer" autoplay muted name="media" poster="https://m.media-amazon.com/images/M/MV5BM2Y5YjljNGMtYTg0NC00YzM4LWFhOGMtMjc0YzYwMzMwNDUwXkEyXkFqcGdeQXVyNDg4MjkzNDk@.jpg" 
+                    preload="metadata" controlslist="nodownload" disablepictureinpicture
+                    src="https://drive.google.com/uc?export=download&id=1ZrnAgL3NHZ8PzVCGQ-wu1iV7sTA4mP88" type='video/mp4'>   
+                    Your browser does not support the video tag.
+                </video>
+                <div class="controls-mute">
+                    <button type="button" class="bi bi-volume-up" onclick="disableMute()" id="mute-video-button" name="button"></button>
+                    <button type="button" class="bi bi-volume-mute" onclick="enableMute()" id="unmute-video-button" name="button"></button>
+                </div>
+                <div id="controls-play">
+                    <button type="button" class="bi bi-play" onclick="playAgain()" id="play-again" name="button"></button>
+                    <p>Play Again</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Modal -->
+    <section class="modal" id="login-modal">
+        <div class="modal-content-container">
+            <div class="close-button-container">
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-title">
+                <p>You are few clicks away from watching your favorite movies and series</p>
+            </div>
+            <div class="other-login-option-container">
+                <div class="other-login-option">
+                    <i class="bi bi-google"></i>
+                    <hr>
+                    <button class="other-login-option-button" onclick="noService()">Login with Google</button>
+                </div>
+                <div class="other-login-option">
+                    <i class="bi bi-facebook"></i>
+                    <hr>
+                    <button class="other-login-option-button" onclick="noService()">Login with Facebook</button>
+                </div>
+            </div>
+            <div class="login-form-container">
+                <form>
+                    <div class="input-field">
+                        <input type="text" autocomplete="off" autofocus required>
+                        <label class="floating-label">Username or Email</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" autocomplete="off" autofocus required>
+                    <label class="floating-label">Password</label>
+                    </div>
+                    <div class="bottom-field">
+                        <input type="checkbox" name="remember-login" id="remember-login" value="remember-login" checked>
+                        <label for="remember-login">Remember me</label>
+                        <a href="#">Forgot password?</a>
+                    </div>
+                    <div class="signin-button-container">
+                        <button id="signin-button" onclick="noService()">Sign-in</button>
+                    </div>
+                    <div class="divider-container">
+                        <hr>
+                        <span>OR</span>
+                    </div>
+                    <div class="sign-up-button-container">
+                        <a class="new-account-button" href="webpages/new-account.html">Create New Account</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Main content -->
+    <main class="home-main">
+        <div class="highlight-container">
+            <div class="highlight-poster-container">
+                <a href="webpages/Hellbound.html">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNzU1ODk0ZWUtMzdkYS00YmI2LWI1NjItOTg0NjQxNGY5MmNlXkEyXkFqcGdeQXVyODk4OTc3MTY@.jpg" alt="highlight">
+                </a>
+            </div>
+            <div class="highlight-content-container">
+                <p class="highlight-description">#1 Trending in Mirar community</p>
+                <a href="webpages/Hellbound.html" id="highlight-title">Hellbound</a>
+                <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>  
+                <div class="genres" id="highlight-genres">
+                    <a href="webpages/browse/genre-crime.html">Crime</a>
+                    <a href="webpages/browse/genre-drama.html">Drama</a>
+                    <a href="webpages/browse/genre-fantasy.html">Fantasy</a>
+                    <a href="webpages/browse/genre-kdrama.html">K-Drama</a>
+                </div>
+                <p id="episode-count"><a href="webpages/browse/year-2021.html">2021 </a> ●  1 Season - 6 Episodes</p>
+                <p id="highlight-synopsis">
+                    People hear predictions on when they will die. When that time comes, a death angel appears in front of them and kills them.
+                    Hellbound occurs in 2023–27 in South Korea. An otherworldly face called an angel suddenly starts to materialize to deliver prophesies called decrees that condemn 
+                    certain individuals to Hell at a specific future time, either seconds or years away. Three hulking supernatural monsters appear 
+                    at almost the exact time to maul and incinerate the person's body in a sort of spectacular show of force called a demonstration. 
+                    Two organizations in cahoots, the cult-like New Truth Society and the gang-like Arrowhead group, gain power by playing on people's fears.
+                </p>
+                <p id="highlight-credits">
+                    Cast
+                    <a href="https://en.wikipedia.org/wiki/Yoo_Ah-in">Yoo Ah-in</a>
+                    <a href="https://en.wikipedia.org/wiki/Kim_Hyun-joo">Kim Hyun-joo</a>
+                    <a href="https://en.wikipedia.org/wiki/Park_Jeong-min_(actor)">Park Jeong-min</a>
+                    <a class="extend-button" href="webpages\Hellbound.html#cast">extend</a>
+                    Director
+                    <a href="https://en.wikipedia.org/wiki/Yeon_Sang-ho">Yeon Sang-ho</a>
+                </p>
+            </div>
+        </div>
+        <div class="grid-movies-container">
+            <div class="grid-highlight-container">
+                <div class="grid-movies-description-container">
+                    <p class="movies-description">New Movie Releases <a class="extend-button" href="webpages/browse/year-2021.html">See more</a></p>
+                </div>
+                <div class="scroll-movies">
+                    <button class="scroll-movies-button" id="left-scroll1">
+                        <i class="bi bi-chevron-left"></i>
+                    </button>
+                    <div class="movies-in-scroll-container" id="scroll-container1">
+                        <div id="scroll-left-side-space1"></div>
+                        <div class="movie-in-scroll">
+                            <a href="webpages/Shang-Chi-and-the-Legend-of-the-Ten-Rings.html">
+                                <img src="https://m.media-amazon.com/images/M/MV5BNTliYjlkNDQtMjFlNS00NjgzLWFmMWEtYmM2Mzc2Zjg3ZjEyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@.jpg" alt="movie-poster">
+                                <p>Shang-Chi and the Legend of the Ten Rings</p>
+                            </a>
+                        </div>
+                        <div class="movie-in-scroll">
+                            <a href="webpages/Sweet-and-Sour.html">
+                                <img src="https://m.media-amazon.com/images/M/MV5BYTFjYWEzYWEtM2JjMS00ZmEyLTk0MWQtZmE2ZDNiNzA0OGMwXkEyXkFqcGdeQXVyMTEzMTI1Mjk3.jpg" alt="movie-poster">
+                                <p>Sweet & Sour</p>
+                            </a>
+                        </div>
+                        <div class="movie-in-scroll">
+                            <a href="webpages/Red-Notice.html">
+                                <img src="https://m.media-amazon.com/images/M/MV5BZmRjODgyMzEtMzIxYS00OWY2LTk4YjUtMGMzZjMzMTZiN2Q0XkEyXkFqcGdeQXVyMTkxNjUyNQ@@.jpg" alt="movie-poster">
+                                <p>Red Notice</p>
+                            </a>
+                        </div>
+                        <div class="movie-in-scroll">
+                            <a href="webpages/Seobok.html">
+                                <img src="https://m.media-amazon.com/images/M/MV5BMzQ1OGRkNDAtZWY4ZS00OTc5LWE5ZDMtMGYxNTZlYTA1ZWE4XkEyXkFqcGdeQXVyMjMxNTAxNDk@.jpg" alt="movie-poster">
+                                <p>Seobok</p>
+                            </a>
+                        </div>
+                        <div class="movie-in-scroll">
+                            <a href="webpages/Mortal-Kombat.html">
+                                <img src="https://m.media-amazon.com/images/M/MV5BY2ZlNWIxODMtN2YwZi00ZjNmLWIyN2UtZTFkYmZkNDQyNTAyXkEyXkFqcGdeQXVyODkzNTgxMDg@.jpg" alt="movie-poster">
+                                <p>Mortal Kombat</p>
+                            </a>
+                        </div>
+                        <div class="movie-in-scroll">
+                            <a href="webpages/The-Suicide-Squad.html">
+                                <img src="https://m.media-amazon.com/images/M/MV5BNGM3YzdlOWYtNjViZS00MTE2LWE1MWUtZmE2ZTcxZjcyMmU3XkEyXkFqcGdeQXVyODEyMTI1MjA@.jpg" alt="movie-poster">
+                                <p>The Suicide Squad</p>
+                            </a>
+                        </div>
+                        <div class="movie-in-scroll">
+                            <a href="webpages/Luca.html">
+                                <img src="https://m.media-amazon.com/images/M/MV5BZTQyNTU0MDktYTFkYi00ZjNhLWE2ODctMzBkM2U1ZTk3YTMzXkEyXkFqcGdeQXVyNTI4MzE4MDU@.jpg" alt="movie-poster">
+                                <p>Luca</p>
+                            </a>
+                        </div>
+                        <div class="movie-in-scroll">
+                            <a href="webpages/My-Amanda.html">
+                                <img src="https://m.media-amazon.com/images/M/MV5BMzE0ZWFkNDQtNDA0Mi00ZWM3LTg0OGYtYmM4MDE5N2E2NDJjXkEyXkFqcGdeQXVyNjE2MjUwNTk@.jpg" alt="movie-poster">
+                                <p>My Amanda</p>
+                            </a>
+                        </div>
+                        <div class="movie-in-scroll">
+                            <a href="webpages/The-Whole-Truth.html">
+                                <img src="https://m.media-amazon.com/images/M/MV5BZDBhZjIyNjctY2RlNS00MzJjLWIwZGItZGQxOWQyNGE2NjljXkEyXkFqcGdeQXVyNjk3NDA1NTE@.jpg" alt="movie-poster">
+                                <p>The Whole Truth</p>
+                            </a>
+                        </div>
+                        <div class="movie-in-scroll">
+                            <a href="webpages/Space-Sweeper.html">
+                                <img src="https://m.media-amazon.com/images/M/MV5BZTUxN2M3ZWYtMzc1MC00NTc4LWFhZDItMzViZDg2NmFjMzBhXkEyXkFqcGdeQXVyMTMxODk2OTU@.jpg" alt="movie-poster">
+                                <p>Space Sweepers</p>
+                            </a>
+                        </div>
+                        <div class="movie-in-scroll">
+                            <a href="webpages/Cube.html">
+                                <img src="https://m.media-amazon.com/images/M/MV5BMTA5ZWYwMDQtNWVjYi00YjkzLTljOGMtOTdmZmMyMjhlYmE4XkEyXkFqcGdeQXVyMzgxODM4NjM@.jpg" alt="movie-poster">
+                                <p>Cube</p>
+                            </a>
+                        </div>
+                        <div class="movie-in-scroll">
+                            <a href="webpages/Dune.html">
+                                <img src="https://m.media-amazon.com/images/M/MV5BN2FjNmEyNWMtYzM0ZS00NjIyLTg5YzYtYThlMGVjNzE1OGViXkEyXkFqcGdeQXVyMTkxNjUyNQ@@.jpg" alt="movie-poster">
+                                <p>Dune</p>
+                            </a>
+                        </div>
+                        <div class="movie-in-scroll">
+                            <a href="webpages/Eternals.html">
+                                <img src="https://m.media-amazon.com/images/M/MV5BMTExZmVjY2ItYTAzYi00MDdlLWFlOWItNTJhMDRjMzQ5ZGY0XkEyXkFqcGdeQXVyODIyOTEyMzY@.jpg" alt="movie-poster">
+                                <p>Eternals</p>
+                            </a>
+                        </div>
+                        <div class="movie-in-scroll">
+                            <a href="webpages/Raya-and-the-Last-Dragon.html">
+                                <img src="https://m.media-amazon.com/images/M/MV5BZWNiOTc4NGItNGY4YS00ZGNkLThkOWEtMDE2ODcxODEwNjkwXkEyXkFqcGdeQXVyMTkxNjUyNQ@@.jpg" alt="movie-poster">
+                                <p>Raya and the Last Dragon</p>
+                            </a>
+                        </div>
+                    </div>
+                    <button class="scroll-movies-button" id="right-scroll1">
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="grid-highlight-container">
+                <div class="grid-movies-description-container">
+                    <p class="movies-description">Recommended for You</p>
+                </div>
+                <div class="movies-in-grid-container">
+                    <div class="movie-in-grid">
+                        <a href="webpages/Time-to-Hunt.html">
+                            <div class="movie-poster-container">
+                                <img src="https://m.media-amazon.com/images/M/MV5BNTBkN2RlYjEtNzgxOC00MDc1LTg0MTEtZTI1ZWQ1MjhlZjYzXkEyXkFqcGdeQXVyNzI1NzMxNzM@.jpg" alt="movie-poster">
+                                <div class="movie-in-grid-description">
+                                    <p>Time to Hunt</p>
+                                    <div class="rating" title="Mirar Community rating">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-half"></i>
+                                        <i class="bi bi-star"></i>
+                                        <i class="bi bi-star"></i>
+                                </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="movie-in-grid">
+                        <a href="webpages/Burning-Blue.html">
+                            <div class="movie-poster-container">
+                                <img src="https://m.media-amazon.com/images/M/MV5BMTYyODQxNjQzOF5BMl5BanBnXkFtZTgwNzU2NzE2MTE@.jpg" alt="movie-poster">
+                                <div class="movie-in-grid-description">
+                                    <p>Burning Blue</p>
+                                    <div class="rating" title="Mirar Community rating">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-half"></i>
+                                </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="movie-in-grid">
+                        <a href="webpages/Howls-Moving-Castle.html">
+                            <div class="movie-poster-container">
+                                <img src="https://www.denofgeek.com/wp-content/uploads/2017/09/howls-moving-castle-poster.jpg" alt="movie-poster">
+                                <div class="movie-in-grid-description">
+                                    <p>Howl's Moving Castle</p>
+                                    <div class="rating" title="Mirar Community rating">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-half"></i>
+                                </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="movie-in-grid">
+                        <a href="webpages/Luca.html">
+                            <div class="movie-poster-container">
+                                <img src="https://m.media-amazon.com/images/M/MV5BZTQyNTU0MDktYTFkYi00ZjNhLWE2ODctMzBkM2U1ZTk3YTMzXkEyXkFqcGdeQXVyNTI4MzE4MDU@._V1_.jpg" alt="movie-poster">
+                                <div class="movie-in-grid-description">
+                                    <p>Luca</p>
+                                    <div class="rating" title="Mirar Community rating">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-half"></i>
+                                        <i class="bi bi-star"></i>
+                                </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="movie-in-grid">
+                        <a href="webpages/Money-Heist.html">
+                            <div class="movie-poster-container">
+                                <img src="https://m.media-amazon.com/images/M/MV5BNDJkYzY3MzMtMGFhYi00MmQ4LWJkNTgtZGNiZWZmMTMxNzdlXkEyXkFqcGdeQXVyMTEyMjM2NDc2.jpg" alt="movie-poster">
+                                <div class="movie-in-grid-description">
+                                    <p>Money Heist</p>
+                                    <div class="rating" title="Mirar Community rating">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-half"></i>
+                                </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="movie-in-grid">
+                        <a href="webpages/The-Nightmare-Before-Christmas.html">
+                            <div class="movie-poster-container">
+                                <img src="https://m.media-amazon.com/images/M/MV5BNWE4OTNiM2ItMjY4Ni00ZTViLWFiZmEtZGEyNGY2ZmNlMzIyXkEyXkFqcGdeQXVyMDU5NDcxNw@@.jpg" alt="movie-poster">
+                                <div class="movie-in-grid-description">
+                                    <p>The Nightmare Before Christmas</p>
+                                    <div class="rating" title="Mirar Community rating">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star"></i>
+                                </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="movie-in-grid">
+                        <a href="webpages/Onward.html">
+                            <div class="movie-poster-container">
+                                <img src="https://lumiere-a.akamaihd.net/v1/images/p_onward_19732_09862641.jpeg" alt="movie-poster">
+                                <div class="movie-in-grid-description">
+                                    <p>Onward</p>
+                                    <div class="rating" title="Mirar Community rating">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-half"></i>
+                                        <i class="bi bi-star"></i>
+                                </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="movie-in-grid">
+                        <a href="webpages/Mother.html">
+                            <div class="movie-poster-container">
+                                <img src="https://m.media-amazon.com/images/M/MV5BMTQzMTg0NDA1M15BMl5BanBnXkFtZTgwODUzMTE0MjE@.jpg" alt="movie-poster">
+                                <div class="movie-in-grid-description">
+                                    <p>Mother</p>
+                                    <div class="rating" title="Mirar Community rating">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-half"></i>
+                                </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="movie-in-grid">
+                        <a href="webpages/The-Notebook.html">
+                            <div class="movie-poster-container">
+                                <img src="https://m.media-amazon.com/images/M/MV5BMTk3OTM5Njg5M15BMl5BanBnXkFtZTYwMzA0ODI3.jpg" alt="movie-poster">
+                                <div class="movie-in-grid-description">
+                                    <p>The Notebook</p>
+                                    <div class="rating" title="Mirar Community rating">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-half"></i>
+                                        <i class="bi bi-star"></i>
+                                        <i class="bi bi-star"></i>
+                                </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="movie-in-grid">
+                        <a href="webpages/Venom-Let-There-Be-Carnage.html">
+                            <div class="movie-poster-container">
+                                <img src="https://m.media-amazon.com/images/M/MV5BYTc3ZTAwYTgtMmM4ZS00MDRiLWI2Y2EtYmRiZmE0YjkzMGY1XkEyXkFqcGdeQXVyMDA4NzMyOA@@.jpg" alt="movie-poster">
+                                <div class="movie-in-grid-description">
+                                    <p>Venom: Let There Be Carnage</p>
+                                    <div class="rating" title="Mirar Community rating">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star"></i>
+                                </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid-highlight-container">
+                    <div class="grid-movies-description-container">
+                        <p class="movies-description">Wizarding World Collection</p>
+                    </div>
+                    <div class="scroll-movies">
+                        <button class="scroll-movies-button" id="left-scroll2">
+                            <i class="bi bi-chevron-left"></i>
+                        </button>
+                        <div class="movies-in-scroll-container" id="scroll-container2">
+                            <div id="scroll-left-side-space"></div>
+                            <div class="movie-in-scroll">
+                                <a href="webpages/Harry-Potter-and-the-Philosopher-Stone.html">
+                                    <img src="https://i.ytimg.com/vi_webp/-ojN9LOtYF4/movieposter.webp" alt="movie-poster">
+                                    <p>Harry Potter and the Philosopher's Stone</p>
+                                </a>
+                            </div>
+                            <div class="movie-in-scroll">
+                                <a href="webpages/Harry-Potter-and-the-Chamber-of-Secrets.html">
+                                    <img src="https://i.ytimg.com/vi_webp/DIPSy8lD1Wc/movieposter.webp" alt="movie-poster">
+                                    <p>Harry Potter and the Chamber of Secrets</p>
+                                </a>
+                            </div>
+                            <div class="movie-in-scroll">
+                                <a href="webpages/Harry-Potter-and-the-Prisoner-of-Azkaban.html">
+                                    <img src="https://i.ytimg.com/vi_webp/wUY2XAUigh0/movieposter.webp" alt="movie-poster">
+                                    <p>Harry Potter and the Prisoner of Azkaban</p>
+                                </a>
+                            </div>
+                            <div class="movie-in-scroll">
+                                <a href="webpages/Harry-Potter-and-the-Goblet-of-Fire.html">
+                                    <img src="https://i.ytimg.com/vi_webp/v3MY5oO6Rj8/movieposter.webp" alt="movie-poster">
+                                    <p>Harry Potter and the Goblet of Fire</p>
+                                </a>
+                            </div>
+                            <div class="movie-in-scroll">
+                                <a href="webpages/Harry-Potter-and-the-Order-of-the-Phoenix.html">
+                                    <img src="https://i.ytimg.com/vi_webp/KwbCCzTN24M/movieposter_en.webp" alt="movie-poster">
+                                    <p>Harry Potter and the Order of the Phoenix</p>
+                                </a>
+                            </div>
+                            <div class="movie-in-scroll">
+                                <a href="webpages/Harry-Potter-and-the-Half-Blood-Prince.html">
+                                    <img src="https://i.ytimg.com/vi_webp/LC2d7MKAhKU/movieposter_en.webp" alt="movie-poster">
+                                    <p>Harry Potter and the Half-Blood Prince</p>
+                                </a>
+                            </div>
+                            <div class="movie-in-scroll">
+                                <a href="webpages/Harry-Potter-and-the-Deathly-Hallows-Part-1.html">
+                                    <img src="https://i.ytimg.com/vi_webp/yU1v1JxJfRI/movieposter.webp" alt="movie-poster">
+                                    <p>Harry Potter and the Deathly Hallows: Part 1</p>
+                                </a>
+                            </div>
+                            <div class="movie-in-scroll">
+                                <a href="webpages/Harry-Potter-and-the-Deathly-Hallows-Part-2.html">
+                                    <img src="https://i.ytimg.com/vi_webp/nf3EUJT9pjY/movieposter.webp" alt="movie-poster">
+                                    <p>Harry Potter and the Deathly Hallows: Part 2</p>
+                                </a>
+                            </div>
+                            <div class="movie-in-scroll">
+                                <a href="webpages/Fantastic-Beast-and-Where-To-Find-Them.html">
+                                    <img src="https://i.ytimg.com/vi_webp/ouEUn1mHiac/movieposter_en.webp" alt="movie-poster">
+                                    <p>Fantastic Beasts and Where to Find Them</p>
+                                </a>
+                            </div>
+                            <div class="movie-in-scroll">
+                                <a href="webpages/Fantastic-Beast-Crimes-of-Grindelwald.html">
+                                    <img src="https://i.ytimg.com/vi_webp/_uF_sLMMftg/movieposter_en.webp" alt="movie-poster">
+                                    <p>Fantastic Beasts: The Crimes Of Grindelwald</p>
+                                </a>
+                            </div>
+                        </div>
+                        <button class="scroll-movies-button" id="right-scroll2">
+                            <i class="bi bi-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="grid-highlight-container">
+                    <div class="grid-movies-description-container">
+                        <p class="movies-description">Top Rated Series</p>
+                    </div>
+                    <div class="scroll-movies">
+                        <button class="scroll-movies-button" id="left-scroll3">
+                            <i class="bi bi-chevron-left"></i>
+                        </button>
+                        <div class="movies-in-scroll-container" id="scroll-container3">
+                            <div id="scroll-left-side-space"></div>
+                            <div class="movie-in-scroll">
+                                <a href="webpages/Money-Heist.html">
+                                    <img src="https://m.media-amazon.com/images/M/MV5BNDJkYzY3MzMtMGFhYi00MmQ4LWJkNTgtZGNiZWZmMTMxNzdlXkEyXkFqcGdeQXVyMTEyMjM2NDc2.jpg" alt="movie-poster">
+                                    <p>Money Heist<br><span>5 Seasons</span></p>
+                                </a>
+                            </div>
+                            <div class="movie-in-scroll">
+                                <a href="webpages/Hellbound.html">
+                                    <img src="https://m.media-amazon.com/images/M/MV5BNzU1ODk0ZWUtMzdkYS00YmI2LWI1NjItOTg0NjQxNGY5MmNlXkEyXkFqcGdeQXVyODk4OTc3MTY@.jpg" alt="movie-poster">
+                                    <p>Hellbound<br><span>1 Season</span></p>
+                                </a>
+                            </div>
+                            <div class="movie-in-scroll">
+                                <a href="webpages/Bagman.html">
+                                    <img src="https://m.media-amazon.com/images/M/MV5BNzU2M2NiZTAtYmQxMi00ZmM3LTkwYjQtNGM5ODE4YjU4ZjFjXkEyXkFqcGdeQXVyNTI5NjIyMw@@.jpg" alt="movie-poster">
+                                    <p>Bagman<br><span>2 Seasons</span></p>
+                                </a>
+                            </div>
+                            <div class="movie-in-scroll">
+                                <a href="webpages/Love-Beneath-the-Stars.html">
+                                    <img src="https://m.media-amazon.com/images/M/MV5BOWVkNWIwYTAtOWJlNS00Y2EwLWFkN2EtYjk5MzlkODZkNzRlXkEyXkFqcGdeQXVyNjE2MjUwNTk@.jpg" alt="movie-poster">
+                                    <p>Love Beneath the Stars<br><span>1 Season</span></p>
+                                </a>
+                            </div>
+                            <div class="movie-in-scroll">
+                                <a href="webpages/Happiness.html">
+                                    <img src="https://m.media-amazon.com/images/M/MV5BNmE5ZGY0NjctYjc4MC00ODc5LThiYzMtOWQ2NzI0MjJkY2I5XkEyXkFqcGdeQXVyNDY5MjMyNTg@.jpg" alt="movie-poster">
+                                    <p>Happiness<br><span>1 Season</span></p>
+                                </a>
+                            </div>
+                            <div class="movie-in-scroll">
+                                <a href="webpages/Arcane.html">
+                                    <img src="https://m.media-amazon.com/images/M/MV5BYmU5OWM5ZTAtNjUzOC00NmUyLTgyOWMtMjlkNjdlMDAzMzU1XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_FMjpg_UX1000_.jpg" alt="movie-poster">
+                                    <p>Arcane: League of Legends<br><span>1 Season</span></p>
+                                </a>
+                            </div>
+                            <div class="movie-in-scroll">
+                                <a href="webpages/Stranger-Things.html">
+                                    <img src="https://img.elo7.com.br/product/zoom/3041510/big-poster-serie-stranger-things-netflix-lo001-90x60-cm-geek.jpg" alt="movie-poster">
+                                    <p>Stranger Things<br><span>3 Seasons</span></p>
+                                </a>
+                            </div>
+                            <div class="movie-in-scroll">
+                                <a href="webpages/Hotel-Del-Luna.html">
+                                    <img src="https://m.media-amazon.com/images/M/MV5BNzQ2MzQzNDktMTg4ZC00ZDE0LThhNmUtYWMxYmI3OTIzYzZlXkEyXkFqcGdeQXVyMzE4MDkyNTA@.jpg" alt="movie-poster">
+                                    <p>Hotel Del Luna<br><span>1 Season</span></p>
+                                </a>
+                            </div>
+                            <div class="movie-in-scroll">
+                                <a href="webpages/18-Again.html">
+                                    <img src="https://m.media-amazon.com/images/M/MV5BN2JhYjMyN2YtM2FjMC00YjI1LWE4M2EtNmY2MjI0ZGZmY2M4XkEyXkFqcGdeQXVyNDU4MDQ0MjM@.jpg" alt="movie-poster">
+                                    <p>18 Again<br><span>1 Season</span></p>
+                                </a>
+                            </div>
+                            <div class="movie-in-scroll">
+                                <a href="webpages/Locke-and-Key.html">
+                                    <img src="https://m.media-amazon.com/images/M/MV5BNjZkNzY4M2ItOWY0Ni00Y2ViLWE1NjItOTIyYzZjMzg5M2E1XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg" alt="movie-poster">
+                                    <p>Locke and Key<br><span>2 Seasons</span></p>
+                                </a>
+                            </div>
+                        </div>
+                        <button class="scroll-movies-button" id="right-scroll3">
+                            <i class="bi bi-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="js/index.js"></script>
+<script src="js/nav-scroll.js"></script>
+<script src="js/modal.js"></script>
+</html>

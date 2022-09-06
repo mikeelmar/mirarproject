@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="..\src\title-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css" integrity="sha384-7ynz3n3tAGNUYFZD3cWe5PDcE36xj85vyFkawcF6tIwxvIecqKvfwLiaFdizhPpN" crossorigin="anonymous">
+    <link rel="stylesheet" href="..\css\index-style.css">
+    <link rel="stylesheet" href="..\css\nav-style.css">
+    <link rel="stylesheet" href="..\css\scrollbar-style.css">
+    <link rel="stylesheet" href="..\css\webpages-styles\series-style.css">
+    <link rel="stylesheet" href="../css/modal-style.css">
+    <title>Mirar  |  Series</title>
+</head>
+<body>
+    <div class="scroll-trigger1"><a id="top"></a></div>
+    <header class="movie-header">
+        <nav class="nav-bar">
+            <div>
+                <a class="logo" href="../index.html">Mirar</a>
+            </div>
+            <ul class="nav-list">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown-title" id="title1"><p>Browse</p>
+                    <div class="arrow-up" id="dropdown-menu1-arrow" name="dropdown" ></div>
+                    <div class="dropdown" id="dropdown-menu1">
+                        <ul class="dropdown-menu1-list">
+                            <li><a href="browse/movies-list.html">Movies</a></li>
+                            <li><a href="browse/series-list.html">Series</a></li>
+                            <li><a href="browse/available-in-cd-list.html">Available in CD</a></li>
+                            <hr class="hr-text" data-content="GENRES">
+                            <li><a href="browse/genre-action.html">Action</a></li>
+                            <li><a href="browse/genre-adventure.html">Adventure</a></li>
+                            <li><a href="browse/genre-animation.html">Animation</a></li>
+                            <li><a href="browse/genre-biography.html">Biography</a></li>
+                            <li><a href="browse/genre-comedy.html">Comedy</a></li>
+                            <li><a href="browse/genre-crime.html">Crime</a></li>
+                            <li><a href="browse/genre-drama.html">Drama</a></li>
+                            <li><a href="browse/genre-family.html">Family</a></li>
+                            <li><a href="browse/genre-fantasy.html">Fantasy</a></li>
+                            <li><a href="browse/genre-history.html">History</a></li>
+                            <li><a href="browse/genre-horror.html">Horror</a></li>
+                            <li><a href="browse/genre-kdrama.html">K-Drama</a></li>
+                            <li><a href="browse/genre-lgbtq.html">LGBTQ+</a></li>
+                            <li><a href="browse/genre-musical.html">Musical</a></li>
+                            <li><a href="browse/genre-Mystery.html">Mystery</a></li>
+                            <li><a href="browse/genre-Romance.html">Romance</a></li>
+                            <li><a href="browse/genre-scifi.html">Sci-Fi</a></li>
+                            <li><a href="browse/genre-thriller.html">Thriller</a></li>
+                            <li><a href="browse/genre-war.html">War</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="dropdown-title" id="title2"><p>Year</p>
+                    <div class="arrow-up" id="dropdown-menu2-arrow"></div>
+                        <div class="dropdown" id="dropdown-menu2" class="nav-scrolled">
+                            <ul>
+                                <li><a href="browse/year-2021.html">2021</a></li>
+                                <li><a href="browse/year-2020.html">2020</a></li>
+                                <li><a href="browse/year-2019.html">2019</a></li>
+                                <li><a href="browse/year-2018.html">2018</a></li>
+                                <li><a href="browse/year-2017.html">2017</a></li>
+                                <li><a href="browse/year-2016.html">2016</a></li>
+                                <li><a href="browse/year-2013.html">2013</a></li>
+                                <li><a href="browse/year-2011.html">2011</a></li>
+                                <li><a href="browse/year-2010.html">2010</a></li>
+                                <li><a href="browse/year-2009.html">2009</a></li>
+                                <li><a href="browse/year-2007.html">2007</a></li>
+                                <li><a href="browse/year-2006.html">2006</a></li>
+                                <li><a href="browse/year-2005.html">2005</a></li>
+                                <li><a href="browse/year-2004.html">2004</a></li>
+                                <li><a href="browse/year-2002.html">2002</a></li>
+                                <li><a href="browse/year-2001.html">2001</a></li>
+                                <li><a href="browse/year-1998.html">1998</a></li>
+                                <li><a href="browse/year-1997.html">1997</a></li>
+                                <li><a href="browse/year-1993.html">1993</a></li>
+                            </ul>
+                        </div>
+                </li>
+            </ul>
+            <div class="search-box">
+                <input id="search-bar" type="text" placeholder="Search films or series">
+                <button class="nav-button" id="search-button" onclick="search()" type="submit">
+                    <i class="bi bi-search"></i>
+                </button>
+            </div>
+            <div class="account-menu">
+                <button class="nav-button" id="account-menu-button">
+                    <i class="bi bi-person-circle">
+                        <div class="arrow-up" id="dropdown-menu3-arrow"></div>
+                        <div class="dropdown" class="account-menu-contents" id="dropdown-menu3">
+                            <ul>
+                                <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-toggles2"></i>Settings</a></li>
+                                <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-bookmarks-fill"></i>Bookmarks</a></li>
+                                <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-book-fill"></i>History</a></li>
+                                <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-cart-check-fill"></i>Purchased and Rented</a></li>
+                                <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-cart4"></i>Shopping Cart</a></li>
+                                <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-box-arrow-in-right"></i>Sign-in</a></li>
+                                <hr id="account-menu-contents-separator"/>
+                                <li><a href="new-account.html"><i class="bi bi-person-fill"></i>Sign-up</a></li>
+                            </ul>
+                        </div>
+                    </i>
+                </button>
+            </div>
+        </nav>
+        <div class="movie-trailer-container" id="iframe-container">
+            <button id="movie-trailer-play-button" onclick="playTrailerAgain()">
+                <i class="bi bi-play-fill"></i>
+                <p>Play again</p>
+            </button>
+            <!-- Movie Trailer -->
+            <iframe id="video" src="https://www.youtube.com/embed/a5LWsmvRYn8?enablejsapi=1&html5=1&vq=hd1080&fs=0&controls=0&start=0&cc_load_policy&rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </header>
+    <!-- Modal -->
+    <section class="modal" id="login-modal">
+        <div class="modal-content-container">
+            <div class="close-button-container">
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-title">
+                <p>You are few clicks away from watching your favorite movies and series</p>
+            </div>
+            <div class="other-login-option-container">
+                <div class="other-login-option">
+                    <i class="bi bi-google"></i>
+                    <hr>
+                    <button class="other-login-option-button" onclick="noService()">Login with Google</button>
+                </div>
+                <div class="other-login-option">
+                    <i class="bi bi-facebook"></i>
+                    <hr>
+                    <button class="other-login-option-button" onclick="noService()">Login with Facebook</button>
+                </div>
+            </div>
+            <div class="login-form-container">
+                <form>
+                    <div class="input-field">
+                        <input type="text" autocomplete="off" autofocus required>
+                        <label class="floating-label">Username or Email</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" autocomplete="off" autofocus required>
+                    <label class="floating-label">Password</label>
+                    </div>
+                    <div class="bottom-field">
+                        <input type="checkbox" name="remember-login" id="remember-login" value="remember-login" checked>
+                        <label for="remember-login">Remember me</label>
+                        <a href="#">Forgot password?</a>
+                    </div>
+                    <div class="signin-button-container">
+                        <button id="signin-button" onclick="noService()">Sign-in</button>
+                    </div>
+                    <div class="divider-container">
+                        <hr>
+                        <span>OR</span>
+                    </div>
+                    <div class="sign-up-button-container">
+                        <a class="new-account-button" href="new-account.html">Create New Account</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <main>
+        <div class="movie-poster-container" id="poster-container">
+            <!-- Movie Poster -->
+            <img src="https://m.media-amazon.com/images/M/MV5BN2JhYjMyN2YtM2FjMC00YjI1LWE4M2EtNmY2MjI0ZGZmY2M4XkEyXkFqcGdeQXVyNDU4MDQ0MjM@.jpg" alt="movie-poster">
+            <div class="commercial-buttons-container">
+                <!-- Prices -->
+                <div class="buy-button-container">
+                    <button class="commercial-button" id="buy-button" onclick="displayModal()"><p class="price">₱899.00</p>Buy</button>
+                </div>
+                <div class="rent-button-container">
+                    <button class="commercial-button" id="rent-button" onclick="displayModal()"><p class="price">₱199.00</p>Rent</button>
+                </div>
+                <div class="buy-in-cd-button-container">
+                    <!-- Change button text if unavailable -->
+                    <button class="commercial-button" id="buy-in-cd-button" onclick="displayModal()"><p class="price">₱1,999.00</p>Buy in CD</button>
+                </div>
+            </div>
+        </div>
+        <div class="movie-content-container">
+            <div class="left-space"></div>
+            <div class="movie-content">
+                <div class="title-and-button-container">
+                    <!-- Movie Title -->
+                    <p id="movie-title">18 Again</p>
+                    <div class="buttons-container">
+                        <button class="buttons" class="buttonUpper" onclick="displayModal()">
+                            <span class="guide" id="guide1">Add to Bookmarks</span> 
+                            <i class="bi bi-bookmark-plus-fill"></i>             
+                        </button>
+                        <button class="buttons" class="buttonUpper" onclick="displayModal()">
+                            <span class="guide" id="guide2">Add to Cart</span>     
+                            <i class="bi bi-cart-plus-fill"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- Movie year release and audience rating -->
+                <p id="movie-year">2020 ● TV-PG</p>
+                <!-- Mirar community rating -->
+                <div class="rating" id="star-rating" title="Mirar Community rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                </div>
+                  <!-- Movie genres and if movie or series-->
+                <div class="genres" id="movie-genres">
+                    <a href="browse/genre-comedy.html">Comedy</a>
+                    <a href="browse/genre-fantasy.html">Fantasy</a>
+                    <a href="browse/genre-romance.html">Romance</a>
+                    <a href="browse/genre-kdrama.html">K-Drama</a>
+                </div>
+                <!-- Movie synopsis -->
+                <p id="movie-synopsis">
+                    After nearly twenty years of marriage, Jung Da Jung and Hong Dae Young seem to be well settled 
+                    in their domestic lives. The proud parents of a pair of eighteen year old twins, the devoted 
+                    couple have worked hard to build a happy home together. But what seems like an ideal life on 
+                    the outside is really anything but. Fed up with Dae Young’s incessant nonsense, Da Jung is at 
+                    her wits’ end. When Dae Young announces that he’s been fired, Da Jung gives up completely. 
+                    Convinced life would be better without her husband in it, Da Jung wastes no time in filing for 
+                    divorce.
+                </p>
+                
+                <div class="external-rating-container">
+                    <!-- Rating from IMDb -->
+                    <div class="external-rating" id="imdb-rating">
+                            <a href="https://www.imdb.com/title/tt12846096/ratings/?ref_=tt_ov_rt">
+                            <img src="https://1000logos.net/wp-content/uploads/2020/08/Imdb-logo.png" alt="external-critic"> IMDb Rating: </a>8.2/10
+                    </div>
+                    <!-- Rating from Rotten tomatoes-->
+                    <div class="external-rating" id="rotten-rating">
+                            <a href="https://www.rottentomatoes.com/tv/18_again">
+                            <img src="https://www.rottentomatoes.com/assets/pizza-pie/images/icons/tomatometer/tomatometer-fresh.149b5e8adc3.svg" alt="external-critic"> Rotten Tomatoes: </a>Unavailable
+                    </div>
+                </div>
+                <hr/>
+                <a id="cast"></a>
+                <div class="tab-buttons-container">
+                    <button class="credits-tab-active" class="tab" id="credits-tab" onclick="creditsActive()">Credits</button>
+                    <button class="episode-tab-inactive" class="tab" id="episode-tab" onclick="episodeActive()">Episodes</button>
+                    <button class="review-tab-inactive" class="tab"  id="review-tab" onclick="reviewActive()">Mirar Community Reviews</button>
+                </div>
+                <div class="tabs-container">       
+                    <div class="credits-tab" id="credits-tab-div">
+                        <div class="tab-content" id="cast">
+                            <!-- Cast section -->
+                            <p class="title">Cast <a href="https://www.imdb.com/title/tt12846096/fullcredits/cast/?ref_=tt_cl_sm">See full cast</a></p>
+                            <div class="cast-list">
+                                <ul class="content">
+                                    <li>Ha-neul Kim</li>
+                                    <li>Yoon Sang-Hyun</li>
+                                    <li>Lee Do-Hyun</li>
+                                    <li>No Jeong-ee</li>
+                                    <li>Ryeoun</li>
+                                    <li>Kang-hyeon Kim</li>
+                                    <li>Mi-do Lee</li>
+                                    <li>Choi Bo-Min</li>
+                                    <li>Hwang In-Yeop</li>
+                                    <li>Wi Ha-Joon</li>
+                                    <li>Kim Yoon-hye</li>
+                                    <li>Yoo-Ri Kim</li>
+                                    <li>Oh So-Hyun</li>
+                                    <li>Jang Hyuk-jin</li>
+                                    <li>Yang Dae-Hyeok</li>
+                                    <li>Eun Min Ko</li>
+                                    <li>Kim Mi-Kyung</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-content" id="production">
+                            <!-- Director -->
+                            <p class="title">Series Director<a href="https://www.imdb.com/title/tt12846096/fullcredits/cast/?ref_=tt_cl_sm">See full production</a></p>
+                            <div class="cast-list">
+                                <p class="content">Byung-Hoon Ha</p>
+                            </div>
+                            <p class="title">Series Writing Credits</p>
+                            <div class="cast-list">
+                                <ul class="content">
+                                    <li>Kim Do-yeon</li>
+                                    <li>Ahn Eun-bin</li>
+                                    <li>Jason Filardi</li>
+                                    <li>Choi Yi-ryun</li>
+                                </ul>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="mirar-community-tab" id="review-tab-div">
+                        <div class="exclusive-container">
+                            <div class="prompt">You have to sign-in to read reviews</div>
+                            <div class="exclusive-button-container">
+                                <button class="exclusive-button">Sign-in</button>
+                                <span>OR</span>
+                                <button class="exclusive-button">Sign-up</button>
+                            </div>
+                        </div>
+                        <div class="reviewer">
+                            <div class="review-photo-container">
+                                <img class="reviewer-photo" src="https://scontent.fceb2-2.fna.fbcdn.net/v/t39.30808-6/264766548_2689036574737683_968917969423937813_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeHgy4F-rmW7fdYqN1VrYtqeccsL62NYvdpxywvrY1i92il8R5bmNLc5R6S2KNNK1eCT-2Fj6hFK2nrF8pAbAL8Q&_nc_ohc=TEr1jNREpA8AX9H_8dz&_nc_ht=scontent.fceb2-2.fna&oh=6182b2ca0c4686ee0819489420fca659&oe=61B772A8" alt="reviewer-photo">
+                            </div>
+                            <div class="review-content-container">
+                                <div class="reviewer-username">mayflor_layan</div>
+                                <p class="review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit minus laudantium 
+                                    labore sunt hic ab nostrum doloribus aliquid vitae! Ipsa, molestiae aspernatur. Qui ducimus optio 
+                                    praesentium veniam sed fugiat deleniti?</p>
+                                <div class="reacts">
+                                    <button><i class="bi bi-caret-up-fill"></i><p class="count">178</p></button>
+                                    <button><i class="bi bi-caret-down"></i><p class="count">1.8K</p></button>
+                                    <button>Reply</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviewer">
+                            <div class="review-photo-container">
+                                <img class="reviewer-photo" src="https://c.tenor.com/3L_71ll8HJcAAAAd/jungkook-holding-face.gif" alt="reviewer-photo">
+                            </div>
+                            <div class="review-content-container">
+                                <div class="reviewer-username">abcdefghi__klmnopqrstuvwxyz</div>
+                                <p class="review">무지개저럼 (무지개저럼) 지워진 꿈을 찾아 헤맸을까 운명같은 흔한 말관 달라 
+                                    아픈 너의 눈빛이 나와 같은 것을 보는 걸 Won't you please stay in dreams yeah</p>
+                                <div class="reacts">
+                                    <button><i class="bi bi-caret-up-fill"></i><p class="count">101K</p></button>
+                                    <button><i class="bi bi-caret-down"></i><p class="count">10</p></button>
+                                    <button>Reply</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviewer">
+                            <div class="review-photo-container">
+                                <img class="reviewer-photo" src="https://scontent.fceb2-2.fna.fbcdn.net/v/t1.6435-9/48389912_746467682371261_686907738990575616_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=174925&_nc_eui2=AeFTXpCdpKHmeYKpRjAAwmRM5DndalexnwPkOd1qV7GfAxQw0TgpcgEPr99ivGO-zCECtrHl9x0NlWvFsyAugwq5&_nc_ohc=93qcbjMG4G4AX9LjdhB&_nc_ht=scontent.fceb2-2.fna&oh=bbfa502c342ea8b0e461d06201accbfc&oe=61D88417" alt="reviewer-photo">
+                            </div>
+                            <div class="review-content-container">
+                                <div class="reviewer-username">f.chord_girl</div>
+                                <p class="review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit minus laudantium 
+                                    labore sunt hic ab nostrum doloribus aliquid vitae! Ipsa, molestiae aspernatur. Qui ducimus optio 
+                                    praesentium veniam sed fugiat deleniti?</p>
+                                <div class="reacts">
+                                    <button><i class="bi bi-caret-up-fill"></i><p class="count">200</p></button>
+                                    <button><i class="bi bi-caret-down"></i><p class="count"></p></button>
+                                    <button>Reply</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviewer">
+                            <div class="review-photo-container">
+                                <img class="reviewer-photo" src="https://pyxis.nymag.com/v1/imgs/ba2/f85/099d4651e7c4a62bcba5da1fbc5c16be70-18-taylor-swift.rsquare.w1200.jpg" alt="reviewer-photo">
+                            </div>
+                            <div class="review-content-container">
+                                <div class="reviewer-username">taylorswift</div>
+                                <p class="review">And you call me up again just to break me like a promise, so casually cruel in the name of being honest. I'm a crumpled up piece of paper 
+                                    lying here, 'cause I remember it all, all, all too well</p>
+                                <div class="reacts">
+                                    <button><i class="bi bi-caret-up-fill"></i><p class="count">1M</p></button>
+                                    <button><i class="bi bi-caret-down"></i><p class="count"></p></button>
+                                    <button>Reply</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviewer">
+                            <div class="review-photo-container">
+                                <img class="reviewer-photo" src="https://www.biography.com/.image/t_share/MTE4MDAzNDEwNzk1MjAyMDYy/jake-gyllenhaal-16242387-1-402.jpg" alt="reviewer-photo">
+                            </div>
+                            <div class="review-content-container">
+                                <div class="reviewer-username">jakegyllenhaal</div>
+                                <p class="review">I have no words but a scarf.</p>
+                                <div class="reacts">
+                                    <button><i class="bi bi-caret-up-fill"></i><p class="count">5</p></button>
+                                    <button><i class="bi bi-caret-down"></i><p class="count">100K</p></button>
+                                    <button>Reply</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="episode-tab" id="episode-tab-div">
+                        <div class="season-selector">
+                            <select id="select" onchange="showSeason(this)">
+                                <option value="" disabled selected>Season</option>
+                                <option value="1">Season 1</option>
+                            </select>
+                            <div class="season" id="season1">
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>01</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">Life Goes On</div>
+                                        <p>
+                                            Just before an important basketball game, Hong Dae-yeong's 
+                                            girlfriend breaks shocking news. Years later, the unhappy pair face divorce.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>02</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">About The Things That Made You Smile</div>
+                                        <p>
+                                            Now a classmate to his children, Dae-yeong finds out just how much they've been keeping from him. Jung Da-jeong takes another shot at her dreams.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>03</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">A Story about Rain and You</div>
+                                        <p>
+                                            Standing up for his son, Dae-yeong challenges Hong Si-u's bullies to a game. At her new job, Da-jeong interviews a baseball star.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>04</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">The Boy We Loved Back Then</div>
+                                        <p>
+                                            While internet trolls attack Da-jeong with malicious comments, Ye Ji-hun's interest in her grows. Hong Si-a warns Gu Ja-seong to stop his ways.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>05</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">First Loves Never Come True</div>
+                                        <p>
+                                            Da-jeong waits for Dae-yeong at divorce court. Meanwhile at work, another new recruit moves to sabotage Da-jeong's chances of keeping her job.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>06</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">Sincere Heart of Her Number 1 Fan</div>
+                                        <p>
+                                            When Da-jeong hurts her ankle, Ji-hun takes care of her. Later, while working the night shift in the newsroom, news breaks about an explosion.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>07</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">Someone Who Gives Courage to Me</div>
+                                        <p>
+                                            Antsy about Chu Ae-rin knowing his true identity, Dae-yeong asks her to keep it a secret. Ji-hun opens up to Da-jeong about his family.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>08</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">The Story Only I Didn't Know</div>
+                                        <p>
+                                            Da-jeong sets out to reveal Choi Il-gwon's corrupt practices. Dae-yeong joins the high school basketball team and visits his mother's grave.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>09</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">Things You Notice Only After You Have Lost Them</div>
+                                        <p>
+                                            Go Deok-jin gathers the parents of the basketball team to discuss Il-gwon. Dae-yeong keeps an eye on the boys who like Si-a.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>10</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">If I Love Again</div>
+                                        <p>
+                                            Dae-yeong comes to Si-a's rescue when she's attacked on the street at night. Da-jeong helps Ji-hun find a connection with his daughter.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>11</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">Lost Love</div>
+                                        <p>
+                                            At a school event, Ja-seong makes a very public confession of love. Da-jeong impresses everyone during the first live broadcast of her new TV program.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>12</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">Half-moon</div>
+                                        <p>
+                                            Da-jeong agonizes over whether something inappropriate happened the night before. Si-a's friends misunderstand Dae-yeong's behavior toward her.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>13</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">Man That Makes My Heart Flutter</div>
+                                        <p>
+                                            Da-jeong decides she must draw the line between herself and Dae-yeong. When she walks out of work after a tough day, Ji-hun is waiting for her.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>14</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">I Miss You</div>
+                                        <p>
+                                            At work, Da-jeong awaits news on her future there. All the while, she's distracted by Dae-yeong's confession — and whether it could really be true.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>15</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">Confession</div>
+                                        <p>
+                                            Seo Ji-ho confirms his suspicions about Dae-yeong. Ji-hun tells Da-jeong about the man who was at the scene of his brother's accident.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>16</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">Life Continues</div>
+                                        <p>
+                                            Si-a and Si-u are finally reunited with their dad. A shocking video of Da-jeong is uploaded online, causing a stir with the public.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+    <script src="..\js\nav-scroll.js"></script>
+    <script src="..\js\series.js"></script>
+    <script src="..\js\webpages-js\one-season.js"></script>
+    <script src="..\js\modal.js"></script>
+</html>

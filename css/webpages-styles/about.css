@@ -1,0 +1,153 @@
+.about-main{
+    position: relative;
+    width: 100%;
+    color: var(--light);
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 7% 70px;
+}
+
+.about-main h3{
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    margin: 15px 0 -15px 0;
+    font-size: 30px;
+}
+
+.logo-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.logo-container img{
+    width: 2.5in;
+    margin-left: 9px;
+}
+
+.logo-container .logo-text{
+    margin-top: -35px;
+}
+
+.logo-container a{
+    text-decoration: none;
+}
+
+.about-description-container{
+    text-align: justify;
+    text-indent: 4rem;
+    font-size: 18px;
+    line-height: 2em;
+}
+
+.dev-profile-content{
+    background-image: url("../../src/title-icon.png");
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: 250px 45px;
+    background-color: transparent;
+    border: 2px solid var(--mustard);
+    width: auto;
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px 2px black;
+    transition: all .5s ease-in-out;
+}
+
+.dev-profile-container{
+    display: flex;
+    gap: 19px;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 100%;
+}
+
+.dev-profile-container .dev-profile{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 20px 30px 20px 10px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    background-image: linear-gradient(107deg, rgb(0 0 0 / 80%), transparent);
+    
+}
+
+.profile-picture img{
+    width: 1in;
+    border-radius: 50px;
+}
+
+.dev-profile a, .dev-profile a:active, .dev-profile a:visited{
+    color: var(--mustard);
+}
+
+.dev-profile .profile-details{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    gap: 3px;
+}
+
+.profile-details .name{
+    font-weight: bolder;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.profile-details .degree, 
+.profile-details .uep{
+    font-size: 15px;
+}
+
+.profile-details .socials{
+    padding: 20px 0;
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.profile-details .socials a{
+    font-size: 20px;
+    position: absolute;
+    transition: .1s ease;
+}
+
+.profile-details .socials a:hover{
+    transform: scale(1.1);
+}
+
+.weblinks{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    bottom: 13px;
+    gap: 25px;
+    position: absolute;
+    
+}
+
+.weblinks button{
+    opacity: .8;
+    padding: 5px;
+    border: none;
+    background: transparent;
+    color: var(--light);
+    border-bottom: 1px solid var(--mustard);
+    cursor: pointer;
+}
+
+@media (max-width: 735px){
+    .dev-profile-container{
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+}

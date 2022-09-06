@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="..\src\title-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css" integrity="sha384-7ynz3n3tAGNUYFZD3cWe5PDcE36xj85vyFkawcF6tIwxvIecqKvfwLiaFdizhPpN" crossorigin="anonymous">
+    <link rel="stylesheet" href="..\css\index-style.css">
+    <link rel="stylesheet" href="..\css\nav-style.css">
+    <link rel="stylesheet" href="..\css\scrollbar-style.css">
+    <link rel="stylesheet" href="..\css\webpages-styles\series-style.css">
+	<link rel="stylesheet" href="../css/modal-style.css">
+
+    <title>Mirar  |  Series</title>
+</head>
+<body>
+    <div class="scroll-trigger1"><a id="top"></a></div>
+    <header class="movie-header">
+        <nav class="nav-bar">
+            <div>
+                <a class="logo" href="../index.html">Mirar</a>
+            </div>
+            <ul class="nav-list">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown-title" id="title1"><p>Browse</p>
+                    <div class="arrow-up" id="dropdown-menu1-arrow" name="dropdown" ></div>
+                    <div class="dropdown" id="dropdown-menu1">
+                        <ul class="dropdown-menu1-list">
+                            <li><a href="browse/movies-list.html">Movies</a></li>
+                            <li><a href="browse/series-list.html">Series</a></li>
+                            <li><a href="browse/available-in-cd-list.html">Available in CD</a></li>
+                            <hr class="hr-text" data-content="GENRES">
+                            <li><a href="browse/genre-action.html">Action</a></li>
+                            <li><a href="browse/genre-adventure.html">Adventure</a></li>
+                            <li><a href="browse/genre-animation.html">Animation</a></li>
+                            <li><a href="browse/genre-biography.html">Biography</a></li>
+                            <li><a href="browse/genre-comedy.html">Comedy</a></li>
+                            <li><a href="browse/genre-crime.html">Crime</a></li>
+                            <li><a href="browse/genre-drama.html">Drama</a></li>
+                            <li><a href="browse/genre-family.html">Family</a></li>
+                            <li><a href="browse/genre-fantasy.html">Fantasy</a></li>
+                            <li><a href="browse/genre-history.html">History</a></li>
+                            <li><a href="browse/genre-horror.html">Horror</a></li>
+                            <li><a href="browse/genre-kdrama.html">K-Drama</a></li>
+                            <li><a href="browse/genre-lgbtq.html">LGBTQ+</a></li>
+                            <li><a href="browse/genre-musical.html">Musical</a></li>
+                            <li><a href="browse/genre-Mystery.html">Mystery</a></li>
+                            <li><a href="browse/genre-Romance.html">Romance</a></li>
+                            <li><a href="browse/genre-scifi.html">Sci-Fi</a></li>
+                            <li><a href="browse/genre-thriller.html">Thriller</a></li>
+                            <li><a href="browse/genre-war.html">War</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="dropdown-title" id="title2"><p>Year</p>
+                    <div class="arrow-up" id="dropdown-menu2-arrow"></div>
+                        <div class="dropdown" id="dropdown-menu2" class="nav-scrolled">
+                            <ul>
+                                <li><a href="browse/year-2021.html">2021</a></li>
+                                <li><a href="browse/year-2020.html">2020</a></li>
+                                <li><a href="browse/year-2019.html">2019</a></li>
+                                <li><a href="browse/year-2018.html">2018</a></li>
+                                <li><a href="browse/year-2017.html">2017</a></li>
+                                <li><a href="browse/year-2016.html">2016</a></li>
+                                <li><a href="browse/year-2013.html">2013</a></li>
+                                <li><a href="browse/year-2011.html">2011</a></li>
+                                <li><a href="browse/year-2010.html">2010</a></li>
+                                <li><a href="browse/year-2009.html">2009</a></li>
+                                <li><a href="browse/year-2007.html">2007</a></li>
+                                <li><a href="browse/year-2006.html">2006</a></li>
+                                <li><a href="browse/year-2005.html">2005</a></li>
+                                <li><a href="browse/year-2004.html">2004</a></li>
+                                <li><a href="browse/year-2002.html">2002</a></li>
+                                <li><a href="browse/year-2001.html">2001</a></li>
+                                <li><a href="browse/year-1998.html">1998</a></li>
+                                <li><a href="browse/year-1997.html">1997</a></li>
+                                <li><a href="browse/year-1993.html">1993</a></li>
+                            </ul>
+                        </div>
+                </li>
+            </ul>
+            <div class="search-box">
+                <input id="search-bar" type="text" placeholder="Search films or series">
+                <button class="nav-button" id="search-button" onclick="search()" type="submit">
+                    <i class="bi bi-search"></i>
+                </button>
+            </div>
+            <div class="account-menu">
+                <button class="nav-button" id="account-menu-button">
+                    <i class="bi bi-person-circle">
+                        <div class="arrow-up" id="dropdown-menu3-arrow"></div>
+                        <div class="dropdown" class="account-menu-contents" id="dropdown-menu3">
+                            <ul>
+                                <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-toggles2"></i>Settings</a></li>
+                                <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-bookmarks-fill"></i>Bookmarks</a></li>
+                                <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-book-fill"></i>History</a></li>
+                                <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-cart-check-fill"></i>Purchased and Rented</a></li>
+                                <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-cart4"></i>Shopping Cart</a></li>
+                                <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-box-arrow-in-right"></i>Sign-in</a></li>
+                                <hr id="account-menu-contents-separator"/>
+                                <li><a href="new-account.html"><i class="bi bi-person-fill"></i>Sign-up</a></li>
+                            </ul>
+                        </div>
+                    </i>
+                </button>
+            </div>
+        </nav>
+        <div class="movie-trailer-container" id="iframe-container">
+            <button id="movie-trailer-play-button" onclick="playTrailerAgain()">
+                <i class="bi bi-play-fill"></i>
+                <p>Play again</p>
+            </button>
+            <!-- Movie Trailer -->
+            <iframe id="video" src="https://www.youtube.com/embed/SiL5Do1uiYk?enablejsapi=1&html5=1&vq=hd1080&fs=0&controls=0&start=0&cc_load_policy&rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </header>
+	<!-- Modal -->
+    <section class="modal" id="login-modal">
+        <div class="modal-content-container">
+            <div class="close-button-container">
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-title">
+                <p>You are few clicks away from watching your favorite movies and series</p>
+            </div>
+            <div class="other-login-option-container">
+                <div class="other-login-option">
+                    <i class="bi bi-google"></i>
+                    <hr>
+                    <button class="other-login-option-button" onclick="noService()">Login with Google</button>
+                </div>
+                <div class="other-login-option">
+                    <i class="bi bi-facebook"></i>
+                    <hr>
+                    <button class="other-login-option-button" onclick="noService()">Login with Facebook</button>
+                </div>
+            </div>
+            <div class="login-form-container">
+                <form>
+                    <div class="input-field">
+                        <input type="text" autocomplete="off" autofocus required>
+                        <label class="floating-label">Username or Email</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" autocomplete="off" autofocus required>
+                    <label class="floating-label">Password</label>
+                    </div>
+                    <div class="bottom-field">
+                        <input type="checkbox" name="remember-login" id="remember-login" value="remember-login" checked>
+                        <label for="remember-login">Remember me</label>
+                        <a href="#">Forgot password?</a>
+                    </div>
+                    <div class="signin-button-container">
+                        <button id="signin-button" onclick="noService()">Sign-in</button>
+                    </div>
+                    <div class="divider-container">
+                        <hr>
+                        <span>OR</span>
+                    </div>
+                    <div class="sign-up-button-container">
+                        <a class="new-account-button" href="new-account.html">Create New Account</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <main>
+        <div class="movie-poster-container" id="poster-container">
+            <!-- Movie Poster -->
+            <img src="https://m.media-amazon.com/images/M/MV5BNzU2M2NiZTAtYmQxMi00ZmM3LTkwYjQtNGM5ODE4YjU4ZjFjXkEyXkFqcGdeQXVyNTI5NjIyMw@@.jpg" alt="movie-poster">
+            <div class="commercial-buttons-container">
+                <!-- Prices -->
+                <div class="buy-button-container">
+                    <button class="commercial-button" id="buy-button" onclick="displayModal()"><p class="price">₱499.00</p>Buy</button>
+                </div>
+                <div class="rent-button-container">
+                    <button class="commercial-button" id="rent-button" onclick="displayModal()"><p class="price">₱85.00</p>Rent</button>
+                </div>
+                <div class="buy-in-cd-button-container">
+                    <!-- Change button text if unavailable -->
+                    <button class="commercial-button" id="buy-in-cd-button" onclick="displayModal()"><p class="price">₱1,499.00</p>Buy in CD</button>
+                </div>
+            </div>
+        </div>
+        <div class="movie-content-container">
+            <div class="left-space"></div>
+            <div class="movie-content">
+                <div class="title-and-button-container">
+                    <!-- Movie Title -->
+                    <p id="movie-title">Bagman</p>
+                    <div class="buttons-container">
+                        <button class="buttons" class="buttonUpper" onclick="displayModal()">
+                            <span class="guide" id="guide1">Add to Bookmarks</span> 
+                            <i class="bi bi-bookmark-plus-fill"></i>             
+                        </button>
+                        <button class="buttons" class="buttonUpper" onclick="displayModal()">
+                            <span class="guide" id="guide2">Add to Cart</span>     
+                            <i class="bi bi-cart-plus-fill"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- Movie year release and audience rating -->
+                <p id="movie-year">2019 ● TV-MA</p>
+                <!-- Mirar community rating -->
+                <div class="rating" id="star-rating" title="Mirar Community rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star"></i>
+                </div>
+                  <!-- Movie genres and if movie or series-->
+                <div class="genres" id="movie-genres">
+                    <a href="browse/genre-crime.html">Crime</a>
+                    <a href="browse/genre-drama.html">Drama</a>
+                    <a href="browse/genre-thriller.html">Thriller</a>
+                </div>
+                <!-- Movie synopsis -->
+                <p id="movie-synopsis">
+                    The newly-elected governor of a Philippine municipality vows to uncover the 
+                    culprit behind his attempted assassination.
+                </p>
+                
+                <div class="external-rating-container">
+                    <!-- Rating from IMDb -->
+                    <div class="external-rating" id="imdb-rating">
+                        <a href="https://www.imdb.com/title/tt10091652/ratings/?ref_=tt_ov_rt">
+                            <img src="https://1000logos.net/wp-content/uploads/2020/08/Imdb-logo.png" alt="external-critic"> IMDb Rating: </a>8.7/10
+                    </div>
+                    <!-- Rating from Rotten tomatoes-->
+                    <div class="external-rating" id="rotten-rating">
+                            <img src="https://www.rottentomatoes.com/assets/pizza-pie/images/icons/tomatometer/tomatometer-fresh.149b5e8adc3.svg" alt="external-critic"> Rotten Tomatoes: </a>Unavailable
+                    </div>
+                </div>
+                <hr/>
+                <a id="cast"></a>
+                <div class="tab-buttons-container">
+                    <button class="credits-tab-active" class="tab" id="credits-tab" onclick="creditsActive()">Credits</button>
+                    <button class="episode-tab-inactive" class="tab" id="episode-tab" onclick="episodeActive()">Episodes</button>
+                    <button class="review-tab-inactive" class="tab"  id="review-tab" onclick="reviewActive()">Mirar Community Reviews</button>
+                </div>
+                <div class="tabs-container">       
+                    <div class="credits-tab" id="credits-tab-div">
+                        <div class="tab-content" id="cast">
+                            <!-- Cast section -->
+                            <p class="title">Cast <a href="https://www.imdb.com/title/tt10091652/fullcredits/cast/?ref_=tt_cl_sm">See full cast</a></p>
+                            <div class="cast-list">
+                                <ul class="content">
+                                    <li>Rolando Inocencio</li>
+                                    <li>Chanel Latorre</li>
+                                    <li>Arjo Atayde</li>
+                                    <li>Yayo Aguila</li>
+                                    <li>Raymond Bagatsing</li>
+                                    <li>Karl Medina</li>
+                                    <li>James Lomahan</li>
+                                    <li>Mon Confiado</li>
+                                    <li>Carlo Aquino</li>
+                                    <li>Rosanna Roces</li>
+                                    <li>Irma Adlawan</li>
+                                    <li>Pio Balbuena</li>
+                                    <li>Yasmyne Suarez</li>
+                                    <li>Romnick Sarmenta</li>
+                                    <li>Jiffy Castaneda</li>
+                                    <li>Allan Paule</li>
+                                    <li>Cris Villanueva</li>
+                                    <li>Max Eigenmann</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-content" id="production">
+                            <!-- Director -->
+                            <p class="title">Director <a href="https://www.imdb.com/title/tt10091652/fullcredits/cast/?ref_=tt_cl_sm">See full production</a></p>
+                            <div class="cast-list">
+                                <p class="content">Shugo Praico</p>
+                            </div>
+                            <p class="title">Series Producers</p>
+                            <div class="cast-list">
+                            <ul class="content">
+                                <li>Deo Endrinal</li>
+                                <li>Charm Guzman</li>
+                                <li>Carlo L. Katigbak</li>
+                                <li>Philip King</li>
+                                <li>Ethel Manaloto-Espiritu</li>
+                                <li>Ginny Monteagudo-Ocampo</li>
+                                <li>Aron Jay Oyong</li>
+                                <li>Emilio Siojo</li>
+                                <li>Linggit Tan</li>
+                                <li>Elaine Uy-Casipit</li>
+                                <li>Cory V. Vidanes</li>
+                                <li>Queenie Quiro</li>
+                                <li>Lino S. Cayetano</li>
+                                <li>Jocelyn Mangilit Tarce</li>
+                                <li>Dean Arcenal</li>
+                                <li>Posh Develos</li>
+                            </ul>
+                            </div>
+                            <p class="title">Series Writing Credits</p>
+                            <div class="cast-list">
+                                <ul class="content">
+                                <li>Shugo Praico (creator and writer)</li>
+                                <li>Philip King (creator and writer)</li>
+                                <li>Lino S. Cayetano (creator)</li>
+                                <li>John Carlo Pacala (writer)</li>
+                                <li>John Anthony Rodulfo (writer)</li>
+                            </ul>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="mirar-community-tab" id="review-tab-div">
+                        <div class="exclusive-container">
+                            <div class="prompt">You have to sign-in to read reviews</div>
+                            <div class="exclusive-button-container">
+                                <button class="exclusive-button">Sign-in</button>
+                                <span>OR</span>
+                                <button class="exclusive-button">Sign-up</button>
+                            </div>
+                        </div>
+                        <div class="reviewer">
+                            <div class="review-photo-container">
+                                <img class="reviewer-photo" src="https://scontent.fceb2-2.fna.fbcdn.net/v/t39.30808-6/264766548_2689036574737683_968917969423937813_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeHgy4F-rmW7fdYqN1VrYtqeccsL62NYvdpxywvrY1i92il8R5bmNLc5R6S2KNNK1eCT-2Fj6hFK2nrF8pAbAL8Q&_nc_ohc=TEr1jNREpA8AX9H_8dz&_nc_ht=scontent.fceb2-2.fna&oh=6182b2ca0c4686ee0819489420fca659&oe=61B772A8" alt="reviewer-photo">
+                            </div>
+                            <div class="review-content-container">
+                                <div class="reviewer-username">mayflor_layan</div>
+                                <p class="review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit minus laudantium 
+                                    labore sunt hic ab nostrum doloribus aliquid vitae! Ipsa, molestiae aspernatur. Qui ducimus optio 
+                                    praesentium veniam sed fugiat deleniti?</p>
+                                <div class="reacts">
+                                    <button><i class="bi bi-caret-up-fill"></i><p class="count">178</p></button>
+                                    <button><i class="bi bi-caret-down"></i><p class="count">1.8K</p></button>
+                                    <button>Reply</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviewer">
+                            <div class="review-photo-container">
+                                <img class="reviewer-photo" src="https://c.tenor.com/3L_71ll8HJcAAAAd/jungkook-holding-face.gif" alt="reviewer-photo">
+                            </div>
+                            <div class="review-content-container">
+                                <div class="reviewer-username">abcdefghi__klmnopqrstuvwxyz</div>
+                                <p class="review">무지개저럼 (무지개저럼) 지워진 꿈을 찾아 헤맸을까 운명같은 흔한 말관 달라 
+                                    아픈 너의 눈빛이 나와 같은 것을 보는 걸 Won't you please stay in dreams yeah</p>
+                                <div class="reacts">
+                                    <button><i class="bi bi-caret-up-fill"></i><p class="count">101K</p></button>
+                                    <button><i class="bi bi-caret-down"></i><p class="count">10</p></button>
+                                    <button>Reply</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviewer">
+                            <div class="review-photo-container">
+                                <img class="reviewer-photo" src="https://scontent.fceb2-2.fna.fbcdn.net/v/t1.6435-9/48389912_746467682371261_686907738990575616_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=174925&_nc_eui2=AeFTXpCdpKHmeYKpRjAAwmRM5DndalexnwPkOd1qV7GfAxQw0TgpcgEPr99ivGO-zCECtrHl9x0NlWvFsyAugwq5&_nc_ohc=93qcbjMG4G4AX9LjdhB&_nc_ht=scontent.fceb2-2.fna&oh=bbfa502c342ea8b0e461d06201accbfc&oe=61D88417" alt="reviewer-photo">
+                            </div>
+                            <div class="review-content-container">
+                                <div class="reviewer-username">f.chord_girl</div>
+                                <p class="review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit minus laudantium 
+                                    labore sunt hic ab nostrum doloribus aliquid vitae! Ipsa, molestiae aspernatur. Qui ducimus optio 
+                                    praesentium veniam sed fugiat deleniti?</p>
+                                <div class="reacts">
+                                    <button><i class="bi bi-caret-up-fill"></i><p class="count">200</p></button>
+                                    <button><i class="bi bi-caret-down"></i><p class="count"></p></button>
+                                    <button>Reply</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviewer">
+                            <div class="review-photo-container">
+                                <img class="reviewer-photo" src="https://pyxis.nymag.com/v1/imgs/ba2/f85/099d4651e7c4a62bcba5da1fbc5c16be70-18-taylor-swift.rsquare.w1200.jpg" alt="reviewer-photo">
+                            </div>
+                            <div class="review-content-container">
+                                <div class="reviewer-username">taylorswift</div>
+                                <p class="review">And you call me up again just to break me like a promise, so casually cruel in the name of being honest. I'm a crumpled up piece of paper 
+                                    lying here, 'cause I remember it all, all, all too well</p>
+                                <div class="reacts">
+                                    <button><i class="bi bi-caret-up-fill"></i><p class="count">1M</p></button>
+                                    <button><i class="bi bi-caret-down"></i><p class="count"></p></button>
+                                    <button>Reply</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviewer">
+                            <div class="review-photo-container">
+                                <img class="reviewer-photo" src="https://www.biography.com/.image/t_share/MTE4MDAzNDEwNzk1MjAyMDYy/jake-gyllenhaal-16242387-1-402.jpg" alt="reviewer-photo">
+                            </div>
+                            <div class="review-content-container">
+                                <div class="reviewer-username">jakegyllenhaal</div>
+                                <p class="review">I have no words but a scarf.</p>
+                                <div class="reacts">
+                                    <button><i class="bi bi-caret-up-fill"></i><p class="count">5</p></button>
+                                    <button><i class="bi bi-caret-down"></i><p class="count">100K</p></button>
+                                    <button>Reply</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="episode-tab" id="episode-tab-div">
+                        <div class="season-selector">
+                            <select id="select" onchange="showSeason(this)">
+                                <option value="" disabled selected>Season</option>
+                                <option value="2">Season 2</option>
+                                <option value="1">Season 1</option>
+                            </select>
+                            <div class="season" id="season1">
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>01</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <p>
+                                            After escaping death - twice in one night, Benjo Malaya 
+                                            (Arjo Atayde), a small-town barber turned recounts the 
+                                            events that led him down the dark and dangerous path of 
+                                            becoming the Governor's "Bagman".
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>02</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <p>
+                                            To secure his family's future, Benjo allows his barbershop to be used as a drop 
+                                            off and pick up point for three unassuming Styrofoam boxes. Not knowing that the boxes 
+                                            contain "grease money" for the vast smuggling network in the province, Benjo is assaulted 
+                                            by Cito (Allan Paule), the Governor's right hand, for his involvement in the illegal 
+                                            operation. At knife point, Benjo's loyalty is tested. His decision impresses Cito and 
+                                            paves the way for Benjo's mentorship to be part of the Governor's "inner circle".
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>03</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <p>
+                                            Cito trains Benjo in the ways of the Bagman: leverage, manipulation, and violence. 
+                                            Three years later, Benjo must use all that he learned from Cito to regain control of his life 
+                                            from the Governor who has already betrayed him. 
+                                            Benjo's first move is to strike a deal with Leon, the Bagman of the Governor's political rival.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>04</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <p>
+                                            With just months from his re-election campaign, Governor Arthur Alcantara is scrutinized for 
+                                            his alleged ill-gotten wealth and corruption practices by the influential broadcaster reporter, 
+                                            Sonny Liwanag. Benjo volunteers and succeeds in silencing Sonny before the truth about the Governor 
+                                            is fully exposed. By serving his master well, Benjo regains the Governor's trust. Now, he is in the 
+                                            perfect position to execute his plan to bring the Governor down.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>05</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <p>
+                                            One by one, Benjo's offensive against the Governor unfolds. The Governor begins to lose grip on his financial benefactors, 
+                                            political backers and even the affection of the women in his life. Benjo's plan pushes the Governor to the brink of backing 
+                                            down from the elections but memories of his climb to power with Cito, sways the Governor's decision to fight on. 
+                                            With his failure and at Leon's gunpoint, Benjo has to resort to a desperate move to bring down the Governor and save his family.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>06</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <p>
+                                            Benjo has only three days to find the corpse of Attorney Joselito Fernando, the first kill of the Governor and 
+                                            Cito during their rise to power. But unknown to Benjo, the noose around his neck is getting tighter as 
+                                            the Governor and Attorney Alex suspects a mole among their ranks.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>07</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <p>
+                                            Benjo's search for evidence against the Governor is stifled when he is called in by Attorney Alex to do a loyalty 
+                                            check on the 12 Mayors of Magdiwang. During which Benjo uncovers information pointing him to the location of Joselito 
+                                            Fernando's corpse. Benjo races to the site. In doing so, 
+                                            he has confirmed Attorney Alex's (Yayo Aguila) suspicion that he is the traitor among them. The Governor orders the capture of Benjo.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>08</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <p>
+                                            Finally, Benjo digs up Joselito Fernando's briefcase which contains enough evidence to bury the Governor for murder 
+                                            but he is captured by the Governor's men. A bloody mess, Benjo finds himself face to face with the Governor who is on 
+                                            the verge of killing him. Benjo resorts to the last card up his sleeve, to pin his 
+                                            treachery on Tres (Angelica Yap), the Governor's youngest girlfriend.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>09</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <p>
+                                            The naive Tres falls into Benjo's trap which implicates her as Mariano's (Cris Villanueva) mole, spurring the 
+                                            Governor's anger and violence towards her. Atty. Alex, on the contrary, is suspicious of Benjo's shticks and is 
+                                            determined to pound the truth out of him, but Benjo is unyielding. However, things go south when the Governor 
+                                            ordered Benjo to kill Tres. Benjo tries his best to save Tres but accidentally kills her after she finds out that Benjo set her up.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>10</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <p>
+                                            After Sam refuses to leave Magdiwang with Benjo, Leon shows up at Ka Romy's house pretending to be the 
+                                            professor's former student. Adamant to kill Benjo, Leon stabs Benjo's leg and points a gun at him. With his life 
+                                            in peril, Benjo then remembers how a simple favor from the Governor led to the crumble of his marriage. As Leon 
+                                            prepares to pull the trigger, 
+                                            he receives a call from Mariano ordering him to spare Benjo's life, for Mariano cooks a plan that only Benjo can execute seamlessly.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>11</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <p>
+                                            At the Governor's party, Benjo transports a bag not to be opened until Mariano says so. Leon keeps Benjo's 
+                                            family as hostage. As the night continues, Benjo gets distracted by the drunk Dos. As he tries to calm her down, 
+                                            Benjo recounts the events which led to his loss of the Governor's favor. Dos opens Benjo's bag. There's a bomb in the bag.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>12</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <p>
+                                            Benjo seeks the Governor's help to dispose of the bomb as well as to save his family. In return, Benjo 
+                                            saves the Governor's life on the shoot out during the filing of candidacy, or not. 
+                                            The Governor died and the "invisible hands" groom Benjo to be his successor. He will be 
+                                            proclaimed as the new Governor, but did he really win?
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="season" id="season2">
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>01</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <p>
+                                            As Benjo hovers between life and death, he encounters his late uncle Dencio's apparition, giving him a 
+                                            perspective on why he should continue fighting and living. When Benjo regains his consciousness, he faces 
+                                            the reality in front of him: that he needs to go back to Magdiwang and be a puppet governor. 
+                                            His first order of business? Build the shady Magdiwang Port.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>02</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <p>
+                                            As news on the displacement of multiple residents linked to the construction of Magdiwang Port breaks out, 
+                                            protesters criticizing the said project sprang up like mushrooms. And, one of the most vocal and influential 
+                                            critics among the opposition is Father Sebastian. To shut the priest's mouth, Benjo resorts to blackmail. 
+                                            Meanwhile, Emman looks for a way to persuade his boss to give him his job back.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>03</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <p>
+                                            After his brutal murder of Father Sebastian, Emman impresses Congressman Matias and earns himself a position within the 
+                                            Congressman's inner circle. Meanwhile, Benjo has to deal 
+                                            with the backlash of the priest's death from the public and the media, which is spearheaded by a vlogger under the name of 
+                                            "Alyas Pepe."
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>04</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <p>
+                                            Despite all of the information regarding Angela Go Ming, Congressman Matias, and the Triad syndicate, 
+                                            Benjo must delve deeper into their world to gain hard evidence to bring them down. Benjo gains Go Ming's trust by 
+                                            halting the inquiry into the construction of the Magdiwang Port. With Benjo's success, Angela's confidence 
+                                            in him rises that leads to his discovery of her vault which he believes contains all the evidence that he would 
+                                            need against the Triad.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>05</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <p>
+                                            As Emman keeps an eye on Benjo's every move, he discovers Atty Alex's hiding place. Emman accidentally kills Atty. Alex, 
+                                            leaving Benjo in distress. The key to Benjo's escape plan is now dead. Trying to save as much of his original plan, Benjo 
+                                            realizes that if he can still win with Emman behind his back. Benjo attempts to conspire with Emman. He tries to convince 
+                                            Emman to work with him. Benjo plants a seed of doubt in Emman's mind. That 
+                                            he is worthless in the eyes of the Congressman. That in the end, he can easily be disposed like garbage. Initially, 
+                                            Emman does not ...
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>06</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <p>
+                                            After Benjo saved Emman's family from the bloody massacre, Emman comes around and accepts Benjo's deal. Benjo will teach 
+                                            Emman all of the things he needs to learn to become a skillful bagman. Now well-equipped, Emman returns to Congressman Matias, 
+                                            but now as Benjo's pair of eyes. While Emman tries to regain Congressman Matias's trust, Benjo is diving deeper into Go Ming's world. 
+                                            As Benjo succeeds in letting 
+                                            Go Ming's guard down, he takes this opportunity to look for any evidence that he may use to expose the Triad's criminal operations.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>07</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <p>
+                                            The divide between Angela Go Ming and Congressman Matias's alliance becomes even more glaring to Benjo. Together with Emman, 
+                                            Benjo exploits this weakness by exposing Matias's shell companies that deal with the smuggling of the country's natural resources. 
+                                            After, he convinces Angela Go Ming that Matias is a loose end that needs to be dealt with. At the same time, Emman convinces 
+                                            Congressman Matias that the exposè is part of Benjo and Go Ming's 
+                                            plan to eliminate him from the Triad. Triggered, Matias sets out to kill Benjo and Angela Go Ming. A Mexican standoff ensues ...
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>08</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <p>
+                                            Benjo uses his birthday celebration as a diversion to escape from Angela Go Ming and her men. One by one, Benjo and his 
+                                            family manages to leave the Governor's mansion but Emman catches up to him and is out for revenge. At Emman's gunpoint, Benjo 
+                                            pleads for his life and his family's. But Emman shoots him in cold blood. After, Emman goes to Senator Paglinawan and exposes 
+                                            Angela Go Ming and the Triad's plans for the Magdiwang Port using evidence 
+                                            that he gained from Benjo's corpse. Angela Go Ming is arrested and the Magdiwang Port Project is shut down all thanks to Emman ...
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+    <script src="..\js\nav-scroll.js"></script>
+    <script src="..\js\series.js"></script>
+    <script src="..\js\webpages-js\two-season.js"></script>
+	<script src="..\js\modal.js"></script>
+</html>

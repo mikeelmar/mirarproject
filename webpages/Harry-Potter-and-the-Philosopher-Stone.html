@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="..\src\title-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css" integrity="sha384-7ynz3n3tAGNUYFZD3cWe5PDcE36xj85vyFkawcF6tIwxvIecqKvfwLiaFdizhPpN" crossorigin="anonymous">
+    <link rel="stylesheet" href="..\css\index-style.css">
+    <link rel="stylesheet" href="..\css\nav-style.css">
+    <link rel="stylesheet" href="..\css\scrollbar-style.css">
+    <link rel="stylesheet" href="..\css\webpages-styles\movie-style.css">
+    <link rel="stylesheet" href="../css/modal-style.css">
+    <title>Mirar  |  Movies</title>
+</head>
+<body>
+    <div class="scroll-trigger1"><a id="top"></a></div>
+    <header class="movie-header">
+        <nav class="nav-bar">
+            <div>
+                <a class="logo" href="../index.html">Mirar</a>
+            </div>
+            <ul class="nav-list">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown-title" id="title1"><p>Browse</p>
+                    <div class="arrow-up" id="dropdown-menu1-arrow" name="dropdown" ></div>
+                    <div class="dropdown" id="dropdown-menu1">
+                        <ul class="dropdown-menu1-list">
+                            <li><a href="browse/movies-list.html">Movies</a></li>
+                            <li><a href="browse/series-list.html">Series</a></li>
+                            <li><a href="browse/available-in-cd-list.html">Available in CD</a></li>
+                            <hr class="hr-text" data-content="GENRES">
+                            <li><a href="browse/genre-action.html">Action</a></li>
+                            <li><a href="browse/genre-adventure.html">Adventure</a></li>
+                            <li><a href="browse/genre-animation.html">Animation</a></li>
+                            <li><a href="browse/genre-biography.html">Biography</a></li>
+                            <li><a href="browse/genre-comedy.html">Comedy</a></li>
+                            <li><a href="browse/genre-crime.html">Crime</a></li>
+                            <li><a href="browse/genre-drama.html">Drama</a></li>
+                            <li><a href="browse/genre-family.html">Family</a></li>
+                            <li><a href="browse/genre-fantasy.html">Fantasy</a></li>
+                            <li><a href="browse/genre-history.html">History</a></li>
+                            <li><a href="browse/genre-horror.html">Horror</a></li>
+                            <li><a href="browse/genre-kdrama.html">K-Drama</a></li>
+                            <li><a href="browse/genre-lgbtq.html">LGBTQ+</a></li>
+                            <li><a href="browse/genre-musical.html">Musical</a></li>
+                            <li><a href="browse/genre-Mystery.html">Mystery</a></li>
+                            <li><a href="browse/genre-Romance.html">Romance</a></li>
+                            <li><a href="browse/genre-scifi.html">Sci-Fi</a></li>
+                            <li><a href="browse/genre-thriller.html">Thriller</a></li>
+                            <li><a href="browse/genre-war.html">War</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="dropdown-title" id="title2"><p>Year</p>
+                    <div class="arrow-up" id="dropdown-menu2-arrow"></div>
+                        <div class="dropdown" id="dropdown-menu2" class="nav-scrolled">
+                            <ul>
+                                <li><a href="browse/year-2021.html">2021</a></li>
+                                <li><a href="browse/year-2020.html">2020</a></li>
+                                <li><a href="browse/year-2019.html">2019</a></li>
+                                <li><a href="browse/year-2018.html">2018</a></li>
+                                <li><a href="browse/year-2017.html">2017</a></li>
+                                <li><a href="browse/year-2016.html">2016</a></li>
+                                <li><a href="browse/year-2013.html">2013</a></li>
+                                <li><a href="browse/year-2011.html">2011</a></li>
+                                <li><a href="browse/year-2010.html">2010</a></li>
+                                <li><a href="browse/year-2009.html">2009</a></li>
+                                <li><a href="browse/year-2007.html">2007</a></li>
+                                <li><a href="browse/year-2006.html">2006</a></li>
+                                <li><a href="browse/year-2005.html">2005</a></li>
+                                <li><a href="browse/year-2004.html">2004</a></li>
+                                <li><a href="browse/year-2002.html">2002</a></li>
+                                <li><a href="browse/year-2001.html">2001</a></li>
+                                <li><a href="browse/year-1998.html">1998</a></li>
+                                <li><a href="browse/year-1997.html">1997</a></li>
+                                <li><a href="browse/year-1993.html">1993</a></li>
+                            </ul>
+                        </div>
+                </li>
+            </ul>
+            <div class="search-box">
+                <input id="search-bar" type="text" placeholder="Search films or series">
+                <button class="nav-button" id="search-button" onclick="search()" type="submit">
+                    <i class="bi bi-search"></i>
+                </button>
+            </div>
+            <div class="account-menu">
+                <button class="nav-button" id="account-menu-button">
+                    <i class="bi bi-person-circle">
+                        <div class="arrow-up" id="dropdown-menu3-arrow"></div>
+                        <div class="dropdown" class="account-menu-contents" id="dropdown-menu3">
+                            <ul>
+                                <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-toggles2"></i>Settings</a></li>
+                                <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-bookmarks-fill"></i>Bookmarks</a></li>
+                                <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-book-fill"></i>History</a></li>
+                                <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-cart-check-fill"></i>Purchased and Rented</a></li>
+                                <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-cart4"></i>Shopping Cart</a></li>
+                                <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-box-arrow-in-right"></i>Sign-in</a></li>
+                                <hr id="account-menu-contents-separator"/>
+                                <li><a href="new-account.html"><i class="bi bi-person-fill"></i>Sign-up</a></li>
+                            </ul>
+                        </div>
+                    </i>
+                </button>
+            </div>
+        </nav>
+        <div class="movie-trailer-container" id="iframe-container">
+            <button id="movie-trailer-play-button" onclick="playTrailerAgain()">
+                <i class="bi bi-play-fill"></i>
+                <p>Play again</p>
+            </button>
+            <!-- Movie Trailer -->
+            <iframe id="video" src="https://www.youtube.com/embed/PbdM1db3JbY?enablejsapi=1&html5=1&vq=hd1080&fs=0&controls=0&start=0&cc_load_policy&rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </header>
+    <section class="modal" id="login-modal">
+        <div class="modal-content-container">
+            <div class="close-button-container">
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-title">
+                <p>You are few clicks away from watching your favorite movies and series</p>
+            </div>
+            <div class="other-login-option-container">
+                <div class="other-login-option">
+                    <i class="bi bi-google"></i>
+                    <hr>
+                    <button class="other-login-option-button" onclick="noService()">Login with Google</button>
+                </div>
+                <div class="other-login-option">
+                    <i class="bi bi-facebook"></i>
+                    <hr>
+                    <button class="other-login-option-button" onclick="noService()">Login with Facebook</button>
+                </div>
+            </div>
+            <div class="login-form-container">
+                <form>
+                    <div class="input-field">
+                        <input type="text" autocomplete="off" autofocus required>
+                        <label class="floating-label">Username or Email</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" autocomplete="off" autofocus required>
+                    <label class="floating-label">Password</label>
+                    </div>
+                    <div class="bottom-field">
+                        <input type="checkbox" name="remember-login" id="remember-login" value="remember-login" checked>
+                        <label for="remember-login">Remember me</label>
+                        <a href="#">Forgot password?</a>
+                    </div>
+                    <div class="signin-button-container">
+                        <button id="signin-button" onclick="noService()">Sign-in</button>
+                    </div>
+                    <div class="divider-container">
+                        <hr>
+                        <span>OR</span>
+                    </div>
+                    <div class="sign-up-button-container">
+                        <a class="new-account-button" href="new-account.html">Create New Account</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <main>
+        <div class="movie-poster-container" id="poster-container">
+            <!-- Movie Poster -->
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxlN5yVLJnpmTyOp33mZ7PRtTs9KqiKmq2pOczXX0Qu_E4SrTY" alt="movie-poster">
+            <div class="commercial-buttons-container">
+                <!-- Prices -->
+                <div class="buy-button-container">
+                    <button class="commercial-button" id="buy-button" onclick="displayModal()"><p class="price">₱500.00</p>Buy</button>
+                </div>
+                <div class="rent-button-container">
+                    <button class="commercial-button" id="rent-button" onclick="displayModal()"><p class="price">₱100.00</p>Rent</button>
+                </div>
+                <div class="buy-in-cd-button-container">
+                    <!-- Change button text if unavailable -->
+                    <button class="commercial-button" id="buy-in-cd-button" onclick="displayModal()"><p class="price">₱1000.00</p>Buy in CD</button>
+                </div>
+            </div>
+        </div>
+        <div class="movie-content-container">
+            <div class="left-space"></div>
+            <div class="movie-content">
+                <div class="title-and-button-container">
+                    <!-- Movie Title -->
+                    <p id="movie-title">Harry Potter and the Philosopher's Stone</p>
+                    <div class="buttons-container">
+                        <button class="buttons" class="buttonUpper" onclick="displayModal()">
+                            <span class="guide" id="guide1">Add to Bookmarks</span> 
+                            <i class="bi bi-bookmark-plus-fill"></i>             
+                        </button>
+                        <button class="buttons" class="buttonUpper" onclick="displayModal()">
+                            <span class="guide" id="guide2">Add to Cart</span>     
+                            <i class="bi bi-cart-plus-fill"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- Movie year release and audience rating -->
+                <p id="movie-year">2001 ● TV-G</p>
+                <!-- Mirar community rating -->
+                <div class="rating" id="star-rating" title="Mirar Community rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                </div>
+                  <!-- Movie genres and if movie or series-->
+                <div class="genres" id="movie-genres">
+                    <a href="browse/genre-adventure.html">Adventure</a>
+                    <a href="browse/genre-family.html">Family</a>
+                    <a href="browse/genre-fantasy.html">Fantasy</a>
+                </div>
+                <!-- Movie synopsis -->
+                <p id="movie-synopsis">
+                    Harry Potter, a boy who learns on his eleventh birthday that he is the orphaned 
+                    son of two powerful wizards and possesses unique magical powers of his own. 
+                    He is summoned from his life as an unwanted child to become a student at Hogwarts, 
+                    an English boarding school for wizards. There, he meets several friends who become 
+                    his closest allies and help him discover the truth about his parents' mysterious deaths.
+                </p>
+                
+                <div class="external-rating-container">
+                    <!-- Rating from IMDb -->
+                    <div class="external-rating" id="imdb-rating">
+                        <a href="https://www.imdb.com/title/tt0241527/ratings/?ref_=tt_ov_rt">
+                            <img src="https://1000logos.net/wp-content/uploads/2020/08/Imdb-logo.png" alt="external-critic"> IMDb Rating: </a>7.6/10
+                    </div>
+                    <!-- Rating from Rotten tomatoes-->
+                    <div class="external-rating" id="rotten-rating">
+                        <a href="https://www.rottentomatoes.com/m/harry_potter_and_the_sorcerers_stone"> 
+                            <img src="https://www.rottentomatoes.com/assets/pizza-pie/images/icons/tomatometer/tomatometer-fresh.149b5e8adc3.svg" alt="external-critic"> Rotten Tomatoes: </a>4/5
+                    </div>
+                </div>
+                <hr/>
+                <a id="cast"></a>
+                <div class="tab-buttons-container">
+                    <button class="tab" id="credits-tab" onclick="creditsActive()">Credits</button>
+                    <button class="review-tab-inactive" class="tab"  id="review-tab" onclick="reviewActive()">Mirar Community Reviews</button>
+                </div>
+                <div class="tabs-container">       
+                    <div class="credits-tab" id="credits-tab-div">
+                        <div class="tab-content" id="cast">
+                            <!-- Cast section -->
+                            <p class="title">Cast <a href="https://www.imdb.com/title/tt0241527/fullcredits?ref_=tt_cl_sm">See full cast</a></p>
+                            <div class="cast-list">
+                                <ul class="content">
+                                    <li>Daniel Radcliffe</li>
+                                    <li>Emma Watson</li>
+                                    <li>Rupert Grint</li>
+                                    <li>Tom Felton</li>
+                                    <li>Richard Harris</li>
+                                    <li>Harry Meling</li>
+                                    <li>Fiona Shaw</li>
+                                    <li>Richard Griffits</li>
+                                    <li>Maggie Smith</li>
+                                    <li>Neville Longbottom</li>
+                                    <li>Alan Rickman</li>
+                                    <li>James Phelps</li>
+                                    <li>Oliver Phelps</li>
+                                    <li>Bonnie Wright</li>
+                                    <li>Julie Walters</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-content" id="production">
+                            <!-- Director -->
+                            <p class="title">Director <a href="https://www.imdb.com/title/tt0241527/fullcredits?ref_=tt_cl_sm">See full production</a></p>
+                            <div class="cast-list">
+                                <p class="content">Chris Columbus</p>
+                            </div>
+                            <p class="title">Producers</p>
+                            <div class="cast-list">
+                            <ul class="content">
+                                <li>Todd Arnow</li>
+                                <li>Michael Barnathan</li>
+                                <li>Chris Columbus</li>
+                                <li>Paula DuPré Pesmen</li>
+                                <li>Duncan Henderson</li>
+                                <li>David Heyman</li>
+                                <li>Mark Radcliffe</li>
+                                <li>Tanya Seghatchian</li>
+
+                            </ul>
+                            </div>
+                            <p class="title">Writing Credits</p>
+                            <div class="cast-list">
+                                <ul class="content">
+                                <li>J.K. Rowling</li>
+                                <li>Steve Kloves</li>
+                            </ul>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="mirar-community-tab" id="review-tab-div">
+                        <div class="exclusive-container">
+                            <div class="prompt">You have to sign-in to read reviews</div>
+                            <div class="exclusive-button-container">
+                                <button class="exclusive-button">Sign-in</button>
+                                <span>OR</span>
+                                <button class="exclusive-button">Sign-up</button>
+                            </div>
+                        </div>
+                        <div class="reviewer">
+                            <div class="review-photo-container">
+                                <img class="reviewer-photo" src="https://scontent.fceb2-2.fna.fbcdn.net/v/t39.30808-6/264766548_2689036574737683_968917969423937813_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeHgy4F-rmW7fdYqN1VrYtqeccsL62NYvdpxywvrY1i92il8R5bmNLc5R6S2KNNK1eCT-2Fj6hFK2nrF8pAbAL8Q&_nc_ohc=TEr1jNREpA8AX9H_8dz&_nc_ht=scontent.fceb2-2.fna&oh=6182b2ca0c4686ee0819489420fca659&oe=61B772A8" alt="reviewer-photo">
+                            </div>
+                            <div class="review-content-container">
+                                <div class="reviewer-username">mayflor_layan</div>
+                                <p class="review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit minus laudantium 
+                                    labore sunt hic ab nostrum doloribus aliquid vitae! Ipsa, molestiae aspernatur. Qui ducimus optio 
+                                    praesentium veniam sed fugiat deleniti?</p>
+                                <div class="reacts">
+                                    <button><i class="bi bi-caret-up-fill"></i><p class="count">178</p></button>
+                                    <button><i class="bi bi-caret-down"></i><p class="count">1.8K</p></button>
+                                    <button>Reply</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviewer">
+                            <div class="review-photo-container">
+                                <img class="reviewer-photo" src="https://c.tenor.com/3L_71ll8HJcAAAAd/jungkook-holding-face.gif" alt="reviewer-photo">
+                            </div>
+                            <div class="review-content-container">
+                                <div class="reviewer-username">abcdefghi__klmnopqrstuvwxyz</div>
+                                <p class="review">무지개저럼 (무지개저럼) 지워진 꿈을 찾아 헤맸을까 운명같은 흔한 말관 달라 
+                                    아픈 너의 눈빛이 나와 같은 것을 보는 걸 Won't you please stay in dreams yeah</p>
+                                <div class="reacts">
+                                    <button><i class="bi bi-caret-up-fill"></i><p class="count">101K</p></button>
+                                    <button><i class="bi bi-caret-down"></i><p class="count">10</p></button>
+                                    <button>Reply</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviewer">
+                            <div class="review-photo-container">
+                                <img class="reviewer-photo" src="https://scontent.fceb2-2.fna.fbcdn.net/v/t1.6435-9/48389912_746467682371261_686907738990575616_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=174925&_nc_eui2=AeFTXpCdpKHmeYKpRjAAwmRM5DndalexnwPkOd1qV7GfAxQw0TgpcgEPr99ivGO-zCECtrHl9x0NlWvFsyAugwq5&_nc_ohc=93qcbjMG4G4AX9LjdhB&_nc_ht=scontent.fceb2-2.fna&oh=bbfa502c342ea8b0e461d06201accbfc&oe=61D88417" alt="reviewer-photo">
+                            </div>
+                            <div class="review-content-container">
+                                <div class="reviewer-username">f.chord_girl</div>
+                                <p class="review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit minus laudantium 
+                                    labore sunt hic ab nostrum doloribus aliquid vitae! Ipsa, molestiae aspernatur. Qui ducimus optio 
+                                    praesentium veniam sed fugiat deleniti?</p>
+                                <div class="reacts">
+                                    <button><i class="bi bi-caret-up-fill"></i><p class="count">200</p></button>
+                                    <button><i class="bi bi-caret-down"></i><p class="count"></p></button>
+                                    <button>Reply</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviewer">
+                            <div class="review-photo-container">
+                                <img class="reviewer-photo" src="https://pyxis.nymag.com/v1/imgs/ba2/f85/099d4651e7c4a62bcba5da1fbc5c16be70-18-taylor-swift.rsquare.w1200.jpg" alt="reviewer-photo">
+                            </div>
+                            <div class="review-content-container">
+                                <div class="reviewer-username">taylorswift</div>
+                                <p class="review">And you call me up again just to break me like a promise, so casually cruel in the name of being honest. I'm a crumpled up piece of paper 
+                                    lying here, 'cause I remember it all, all, all too well</p>
+                                <div class="reacts">
+                                    <button><i class="bi bi-caret-up-fill"></i><p class="count">1M</p></button>
+                                    <button><i class="bi bi-caret-down"></i><p class="count"></p></button>
+                                    <button>Reply</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviewer">
+                            <div class="review-photo-container">
+                                <img class="reviewer-photo" src="https://www.biography.com/.image/t_share/MTE4MDAzNDEwNzk1MjAyMDYy/jake-gyllenhaal-16242387-1-402.jpg" alt="reviewer-photo">
+                            </div>
+                            <div class="review-content-container">
+                                <div class="reviewer-username">jakegyllenhaal</div>
+                                <p class="review">I have no words but a scarf.</p>
+                                <div class="reacts">
+                                    <button><i class="bi bi-caret-up-fill"></i><p class="count">5</p></button>
+                                    <button><i class="bi bi-caret-down"></i><p class="count">100K</p></button>
+                                    <button>Reply</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+    <script src="..\js\nav-scroll.js"></script>
+    <script src="..\js\movie.js"></script>
+    <script src="..\js\modal.js"></script>
+</html>

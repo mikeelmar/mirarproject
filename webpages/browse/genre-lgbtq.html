@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css" integrity="sha384-7ynz3n3tAGNUYFZD3cWe5PDcE36xj85vyFkawcF6tIwxvIecqKvfwLiaFdizhPpN" crossorigin="anonymous">
+    <link rel="icon" href="../../src/title-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/nav-style.css">
+    <link rel="stylesheet" href="../../css/scrollbar-style.css">
+    <link rel="stylesheet" href="../../css/index-style.css">
+    <link rel="stylesheet" href="../../css/movies-grid.css">
+    <link rel="stylesheet" href="../../css/modal-style.css">
+    <link rel="stylesheet" href="../../css/webpages-styles/list.css">
+    <title>Mirar  |  LGBTQ+ Movies and Series</title>
+</head>
+<body>
+    <!-- nav style changes after it intersects with this div -->
+    <div class="scroll-trigger1"></div>
+    <header class="home-header">
+       <!-- Navigation bar -->
+       <nav class="nav-bar">
+        <div>
+            <a class="logo" href="../../index.html">Mirar</a>
+        </div>
+        <ul class="nav-list">
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li class="dropdown-title" id="title1"><p>Browse</p>
+                <div class="arrow-up" id="dropdown-menu1-arrow" name="dropdown" ></div>
+                <div class="dropdown" id="dropdown-menu1">
+                    <ul class="dropdown-menu1-list">
+                        <li><a href="movies-list.html">Movies</a></li>
+                        <li><a href="series-list.html">Series</a></li>
+                        <li><a href="available-in-cd-list.html">Available in CD</a></li>
+                        <hr class="hr-text" data-content="GENRES">
+                        <li><a href="genre-action.html">Action</a></li>
+                        <li><a href="genre-adventure.html">Adventure</a></li>
+                        <li><a href="genre-animation.html">Animation</a></li>
+                        <li><a href="genre-biography.html">Biography</a></li>
+                        <li><a href="genre-comedy.html">Comedy</a></li>
+                        <li><a href="genre-crime.html">Crime</a></li>
+                        <li><a href="genre-drama.html">Drama</a></li>
+                        <li><a href="genre-family.html">Family</a></li>
+                        <li><a href="genre-fantasy.html">Fantasy</a></li>
+                        <li><a href="genre-history.html">History</a></li>
+                        <li><a href="genre-horror.html">Horror</a></li>
+                        <li><a href="genre-kdrama.html">K-Drama</a></li>
+                        <li><a href="genre-lgbtq.html">LGBTQ+</a></li>
+                        <li><a href="genre-musical.html">Musical</a></li>
+                        <li><a href="genre-Mystery.html">Mystery</a></li>
+                        <li><a href="genre-Romance.html">Romance</a></li>
+                        <li><a href="genre-scifi.html">Sci-Fi</a></li>
+                        <li><a href="genre-thriller.html">Thriller</a></li>
+                        <li><a href="genre-war.html">War</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="dropdown-title" id="title2"><p>Year</p>
+                <div class="arrow-up" id="dropdown-menu2-arrow"></div>
+                    <div class="dropdown" id="dropdown-menu2" class="nav-scrolled">
+                        <ul>
+                            <li><a href="year-2021.html">2021</a></li>
+                            <li><a href="year-2020.html">2020</a></li>
+                            <li><a href="year-2019.html">2019</a></li>
+                            <li><a href="year-2018.html">2018</a></li>
+                            <li><a href="year-2017.html">2017</a></li>
+                            <li><a href="year-2016.html">2016</a></li>
+                            <li><a href="year-2013.html">2013</a></li>
+                            <li><a href="year-2011.html">2011</a></li>
+                            <li><a href="year-2010.html">2010</a></li>
+                            <li><a href="year-2009.html">2009</a></li>
+                            <li><a href="year-2007.html">2007</a></li>
+                            <li><a href="year-2006.html">2006</a></li>
+                            <li><a href="year-2005.html">2005</a></li>
+                            <li><a href="year-2004.html">2004</a></li>
+                            <li><a href="year-2002.html">2002</a></li>
+                            <li><a href="year-2001.html">2001</a></li>
+                            <li><a href="year-1998.html">1998</a></li>
+                            <li><a href="year-1997.html">1997</a></li>
+                            <li><a href="year-1993.html">1993</a></li>
+                        </ul>
+                    </div>
+            </li>
+        </ul>
+        <div class="search-box">
+            <input id="search-bar" type="text" placeholder="Search films or series">
+            <button class="nav-button" id="search-button" onclick="search()" type="submit">
+                <i class="bi bi-search"></i>
+            </button>
+        </div>
+        <div class="account-menu">
+            <button class="nav-button" id="account-menu-button">
+                <i class="bi bi-person-circle">
+                    <div class="arrow-up" id="dropdown-menu3-arrow"></div>
+                    <div class="dropdown" class="account-menu-contents" id="dropdown-menu3">
+                        <ul>
+                            <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-toggles2"></i>Settings</a></li>
+                            <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-bookmarks-fill"></i>Bookmarks</a></li>
+                            <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-book-fill"></i>History</a></li>
+                            <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-cart-check-fill"></i>Purchased and Rented</a></li>
+                            <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-cart4"></i>Shopping Cart</a></li>
+                            <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-box-arrow-in-right"></i>Sign-in</a></li>
+                            <hr id="account-menu-contents-separator"/>
+                            <li><a href="webpages/new-account.html"><i class="bi bi-person-fill"></i>Sign-up</a></li>
+                        </ul>
+                    </div>
+                </i>
+            </button>
+        </div>
+    </nav>
+    </header>
+    <!-- Modal -->
+    <section class="modal" id="login-modal">
+        <div class="modal-content-container">
+            <div class="close-button-container">
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-title">
+                <p>You are few clicks away from watching your favorite movies and series</p>
+            </div>
+            <div class="other-login-option-container">
+                <div class="other-login-option">
+                    <i class="bi bi-google"></i>
+                    <hr>
+                    <button class="other-login-option-button" onclick="noService()">Login with Google</button>
+                </div>
+                <div class="other-login-option">
+                    <i class="bi bi-facebook"></i>
+                    <hr>
+                    <button class="other-login-option-button" onclick="noService()">Login with Facebook</button>
+                </div>
+            </div>
+            <div class="login-form-container">
+                <form>
+                    <div class="input-field">
+                        <input type="text" autocomplete="off" autofocus required>
+                        <label class="floating-label">Username or Email</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" autocomplete="off" autofocus required>
+                    <label class="floating-label">Password</label>
+                    </div>
+                    <div class="bottom-field">
+                        <input type="checkbox" name="remember-login" id="remember-login" value="remember-login" checked>
+                        <label for="remember-login">Remember me</label>
+                        <a href="#">Forgot password?</a>
+                    </div>
+                    <div class="signin-button-container">
+                        <button id="signin-button" onclick="noService()">Sign-in</button>
+                    </div>
+                    <div class="divider-container">
+                        <hr>
+                        <span>OR</span>
+                    </div>
+                    <div class="sign-up-button-container">
+                        <a class="new-account-button" href="../new-account.html">Create New Account</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <main class="list-main">
+        <div class="title-container">
+            <p class="title">LGBTQ+</p>
+            <div class="tools-container">
+                <select id="select-sort" onchange="sortList(this)">
+                    <option id="default" value="" selected>A-Z</option>
+                    <option value="1">Year</option>
+                    <option value="2">Rating</option>
+                </select>
+                <hr>
+                <select id="select-page" onchange="location = this.value;">
+                    <option value="genre-LGBTQ+.html" selected>Page 1</option>
+                </select>
+            </div>
+        </div>
+        <hr class="list-divider">
+        <div class="grid-highlight-container">
+            <div class="movies-in-grid-container">
+                
+                <div class="movie-in-grid">
+                    <a href="../Burning-Blue.html">
+                        <div class="movie-poster-container">
+                            <img src="https://m.media-amazon.com/images/M/MV5BMTYyODQxNjQzOF5BMl5BanBnXkFtZTgwNzU2NzE2MTE@.jpg" alt="movie-poster">
+                            <div class="movie-in-grid-description">
+                                <p>Burning Blue</p>
+                                <div class="rating" title="Mirar Community rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="movie-in-grid">
+                    <a href="../Call-Me-By-Your-Name.html">
+                        <div class="movie-poster-container">
+                            <img src="https://m.media-amazon.com/images/M/MV5BNDk3NTEwNjc0MV5BMl5BanBnXkFtZTgwNzYxNTMwMzI@.jpg" alt="movie-poster">
+                            <div class="movie-in-grid-description">
+                                <p>Call Me By Your Name</p>
+                                <div class="rating" title="Mirar Community rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="movie-in-grid">
+                    <a href="../Dew.html">
+                        <div class="movie-poster-container">
+                            <img src="https://m.media-amazon.com/images/M/MV5BNTY2NTNiNDgtNjY0ZC00OGY1LWJlNjktNmU5ZWE4MDllMDA4XkEyXkFqcGdeQXVyNzg4NDEyNDk@.jpg" alt="movie-poster">
+                            <div class="movie-in-grid-description">
+                                <p>Dew</p>
+                                <div class="rating" title="Mirar Community rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="movie-in-grid">
+                    <a href="../Love-Beneath-the-Stars.html">
+                        <div class="movie-poster-container">
+                            <img src="https://m.media-amazon.com/images/M/MV5BOWVkNWIwYTAtOWJlNS00Y2EwLWFkN2EtYjk5MzlkODZkNzRlXkEyXkFqcGdeQXVyNjE2MjUwNTk@.jpg" alt="movie-poster">
+                            <div class="movie-in-grid-description">
+                                <p>Love Beneath the Stars</p>
+                                <div class="rating" title="Mirar Community rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                                <p class="rating">1 Season</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="movie-in-grid">
+                    <a href="../Your-Name-Engraved-Herein.html">
+                        <div class="movie-poster-container">
+                            <img src="https://i.pinimg.com/564x/5a/d0/87/5ad087305fa3a8550fc020f9f0553bbf.jpg" alt="movie-poster">
+                            <div class="movie-in-grid-description">
+                                <p>Your Name Engraved Herein</p>
+                                <div class="rating" title="Mirar Community rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <div class="page-nav-container">
+            <a href="genre-LGBTQ+.html">1</a>
+        </div>
+    </main>
+</body>
+<script src="../../js/nav-scroll.js"></script>
+<script src="../../js/modal.js"></script>
+<script src="../../js/webpages-js/browse/list.js"></script>
+</html>

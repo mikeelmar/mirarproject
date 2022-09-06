@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="..\src\title-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css" integrity="sha384-7ynz3n3tAGNUYFZD3cWe5PDcE36xj85vyFkawcF6tIwxvIecqKvfwLiaFdizhPpN" crossorigin="anonymous">
+    <link rel="stylesheet" href="..\css\index-style.css">
+    <link rel="stylesheet" href="..\css\nav-style.css">
+    <link rel="stylesheet" href="..\css\scrollbar-style.css">
+    <link rel="stylesheet" href="..\css\webpages-styles\series-style.css">
+    <link rel="stylesheet" href="../css/modal-style.css">
+    <title>Mirar  |  Series</title>
+</head>
+<body>
+    <div class="scroll-trigger1"><a id="top"></a></div>
+    <header class="movie-header">
+        <nav class="nav-bar">
+            <div>
+                <a class="logo" href="../index.html">Mirar</a>
+            </div>
+            <ul class="nav-list">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown-title" id="title1"><p>Browse</p>
+                    <div class="arrow-up" id="dropdown-menu1-arrow" name="dropdown" ></div>
+                    <div class="dropdown" id="dropdown-menu1">
+                        <ul class="dropdown-menu1-list">
+                            <li><a href="browse/movies-list.html">Movies</a></li>
+                            <li><a href="browse/series-list.html">Series</a></li>
+                            <li><a href="browse/available-in-cd-list.html">Available in CD</a></li>
+                            <hr class="hr-text" data-content="GENRES">
+                            <li><a href="browse/genre-action.html">Action</a></li>
+                            <li><a href="browse/genre-adventure.html">Adventure</a></li>
+                            <li><a href="browse/genre-animation.html">Animation</a></li>
+                            <li><a href="browse/genre-biography.html">Biography</a></li>
+                            <li><a href="browse/genre-comedy.html">Comedy</a></li>
+                            <li><a href="browse/genre-crime.html">Crime</a></li>
+                            <li><a href="browse/genre-drama.html">Drama</a></li>
+                            <li><a href="browse/genre-family.html">Family</a></li>
+                            <li><a href="browse/genre-fantasy.html">Fantasy</a></li>
+                            <li><a href="browse/genre-history.html">History</a></li>
+                            <li><a href="browse/genre-horror.html">Horror</a></li>
+                            <li><a href="browse/genre-kdrama.html">K-Drama</a></li>
+                            <li><a href="browse/genre-lgbtq.html">LGBTQ+</a></li>
+                            <li><a href="browse/genre-musical.html">Musical</a></li>
+                            <li><a href="browse/genre-Mystery.html">Mystery</a></li>
+                            <li><a href="browse/genre-Romance.html">Romance</a></li>
+                            <li><a href="browse/genre-scifi.html">Sci-Fi</a></li>
+                            <li><a href="browse/genre-thriller.html">Thriller</a></li>
+                            <li><a href="browse/genre-war.html">War</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="dropdown-title" id="title2"><p>Year</p>
+                    <div class="arrow-up" id="dropdown-menu2-arrow"></div>
+                        <div class="dropdown" id="dropdown-menu2" class="nav-scrolled">
+                            <ul>
+                                <li><a href="browse/year-2021.html">2021</a></li>
+                                <li><a href="browse/year-2020.html">2020</a></li>
+                                <li><a href="browse/year-2019.html">2019</a></li>
+                                <li><a href="browse/year-2018.html">2018</a></li>
+                                <li><a href="browse/year-2017.html">2017</a></li>
+                                <li><a href="browse/year-2016.html">2016</a></li>
+                                <li><a href="browse/year-2013.html">2013</a></li>
+                                <li><a href="browse/year-2011.html">2011</a></li>
+                                <li><a href="browse/year-2010.html">2010</a></li>
+                                <li><a href="browse/year-2009.html">2009</a></li>
+                                <li><a href="browse/year-2007.html">2007</a></li>
+                                <li><a href="browse/year-2006.html">2006</a></li>
+                                <li><a href="browse/year-2005.html">2005</a></li>
+                                <li><a href="browse/year-2004.html">2004</a></li>
+                                <li><a href="browse/year-2002.html">2002</a></li>
+                                <li><a href="browse/year-2001.html">2001</a></li>
+                                <li><a href="browse/year-1998.html">1998</a></li>
+                                <li><a href="browse/year-1997.html">1997</a></li>
+                                <li><a href="browse/year-1993.html">1993</a></li>
+                            </ul>
+                        </div>
+                </li>
+            </ul>
+            <div class="search-box">
+                <input id="search-bar" type="text" placeholder="Search films or series">
+                <button class="nav-button" id="search-button" onclick="search()" type="submit">
+                    <i class="bi bi-search"></i>
+                </button>
+            </div>
+            <div class="account-menu">
+                <button class="nav-button" id="account-menu-button">
+                    <i class="bi bi-person-circle">
+                        <div class="arrow-up" id="dropdown-menu3-arrow"></div>
+                        <div class="dropdown" class="account-menu-contents" id="dropdown-menu3">
+                            <ul>
+                                <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-toggles2"></i>Settings</a></li>
+                                <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-bookmarks-fill"></i>Bookmarks</a></li>
+                                <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-book-fill"></i>History</a></li>
+                                <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-cart-check-fill"></i>Purchased and Rented</a></li>
+                                <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-cart4"></i>Shopping Cart</a></li>
+                                <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-box-arrow-in-right"></i>Sign-in</a></li>
+                                <hr id="account-menu-contents-separator"/>
+                                <li><a href="new-account.html"><i class="bi bi-person-fill"></i>Sign-up</a></li>
+                            </ul>
+                        </div>
+                    </i>
+                </button>
+            </div>
+        </nav>
+        <div class="movie-trailer-container" id="iframe-container">
+            <button id="movie-trailer-play-button" onclick="playTrailerAgain()">
+                <i class="bi bi-play-fill"></i>
+                <p>Play again</p>
+            </button>
+            <!-- Movie Trailer -->
+            <iframe id="video" src="https://www.youtube.com/embed/b9EkMc79ZSU?enablejsapi=1&html5=1&vq=hd1080&fs=0&controls=0&start=0&cc_load_policy&rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </header>
+    <section class="modal" id="login-modal">
+        <div class="modal-content-container">
+            <div class="close-button-container">
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-title">
+                <p>You are few clicks away from watching your favorite movies and series</p>
+            </div>
+            <div class="other-login-option-container">
+                <div class="other-login-option">
+                    <i class="bi bi-google"></i>
+                    <hr>
+                    <button class="other-login-option-button" onclick="noService()">Login with Google</button>
+                </div>
+                <div class="other-login-option">
+                    <i class="bi bi-facebook"></i>
+                    <hr>
+                    <button class="other-login-option-button" onclick="noService()">Login with Facebook</button>
+                </div>
+            </div>
+            <div class="login-form-container">
+                <form>
+                    <div class="input-field">
+                        <input type="text" autocomplete="off" autofocus required>
+                        <label class="floating-label">Username or Email</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" autocomplete="off" autofocus required>
+                    <label class="floating-label">Password</label>
+                    </div>
+                    <div class="bottom-field">
+                        <input type="checkbox" name="remember-login" id="remember-login" value="remember-login" checked>
+                        <label for="remember-login">Remember me</label>
+                        <a href="#">Forgot password?</a>
+                    </div>
+                    <div class="signin-button-container">
+                        <button id="signin-button" onclick="noService()">Sign-in</button>
+                    </div>
+                    <div class="divider-container">
+                        <hr>
+                        <span>OR</span>
+                    </div>
+                    <div class="sign-up-button-container">
+                        <a class="new-account-button" href="new-account.html">Create New Account</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <main>
+        <div class="movie-poster-container" id="poster-container">
+            <!-- Movie Poster -->
+            <img src="https://img.elo7.com.br/product/zoom/3041510/big-poster-serie-stranger-things-netflix-lo001-90x60-cm-geek.jpg" alt="movie-poster">
+            <div class="commercial-buttons-container">
+                <!-- Prices -->
+                <div class="buy-button-container">
+                    <button class="commercial-button" id="buy-button" onclick="displayModal()"><p class="price">₱755.00</p>Buy</button>
+                </div>
+                <div class="rent-button-container">
+                    <button class="commercial-button" id="rent-button" onclick="displayModal()"><p class="price">₱100.00</p>Rent</button>
+                </div>
+                <div class="buy-in-cd-button-container">
+                    <!-- Change button text if unavailable -->
+                    <button class="commercial-button" id="buy-in-cd-button-unavailable" title="Unavailable for Purchase"><p class="price">Unavailable in CD</p>Buy in CD</button>
+                </div>
+            </div>
+        </div>
+        <div class="movie-content-container">
+            <div class="left-space"></div>
+            <div class="movie-content">
+                <div class="title-and-button-container">
+                    <!-- Movie Title -->
+                    <p id="movie-title">Stranger Things</p>
+                    <div class="buttons-container">
+                        <button class="buttons" class="buttonUpper" onclick="displayModal()">
+                            <span class="guide" id="guide1">Add to Bookmarks</span> 
+                            <i class="bi bi-bookmark-plus-fill"></i>             
+                        </button>
+                        <button class="buttons" class="buttonUpper" onclick="displayModal()">
+                            <span class="guide" id="guide2">Add to Cart</span>     
+                            <i class="bi bi-cart-plus-fill"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- Movie year release and audience rating -->
+                <p id="movie-year">2016-2021 ● TV-PG 13</p>
+                <!-- Mirar community rating -->
+                <div class="rating" id="star-rating" title="Mirar Community rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star"></i>
+                </div>
+                  <!-- Movie genres and if movie or series-->
+                <div class="genres" id="movie-genres">
+                    <a href="browse/genre-drama.html">Drama</a>
+                    <a href="browse/genre-fantasy.html">Fantasy</a>
+                    <a href="browse/genre-horror.html">Horror</a>
+                    <a href="browse/genre-thriller.html">Thriller</a>
+                </div>
+                <!-- Movie synopsis -->
+                <p id="movie-synopsis">
+                    After the mysterious and sudden vanishing of a young boy, the people of a small 
+                    town begin to uncover secrets of a government lab, portals to another world and 
+                    sinister monsters. The boy's mother desperately tries to find him, 
+                    convinced he is in grave danger, while the police chief searches for answers.
+                </p>
+                
+                <div class="external-rating-container">
+                    <!-- Rating from IMDb -->
+                    <div class="external-rating" id="imdb-rating">
+                        <a href="https://www.imdb.com/title/tt4574334/ratings/?ref_=tt_ov_rt">
+                            <img src="https://1000logos.net/wp-content/uploads/2020/08/Imdb-logo.png" alt="external-critic"> IMDb Rating: </a>8.7/10
+                    </div>
+                    <!-- Rating from Rotten tomatoes-->
+                    <div class="external-rating" id="rotten-rating">
+                        <a href="https://www.rottentomatoes.com/tv/stranger_things"> 
+                            <img src="https://www.rottentomatoes.com/assets/pizza-pie/images/icons/tomatometer/tomatometer-fresh.149b5e8adc3.svg" alt="external-critic"> Rotten Tomatoes: </a>89%
+                    </div>
+                </div>
+                <hr/>
+                <a id="cast"></a>
+                <div class="tab-buttons-container">
+                    <button class="credits-tab-active" class="tab" id="credits-tab" onclick="creditsActive()">Credits</button>
+                    <button class="episode-tab-inactive" class="tab" id="episode-tab" onclick="episodeActive()">Episodes</button>
+                    <button class="review-tab-inactive" class="tab"  id="review-tab" onclick="reviewActive()">Mirar Community Reviews</button>
+                </div>
+                <div class="tabs-container">       
+                    <div class="credits-tab" id="credits-tab-div">
+                        <div class="tab-content" id="cast">
+                            <!-- Cast section -->
+                            <p class="title">Cast <a href="https://www.imdb.com/title/tt4574334/fullcredits/?ref_=tt_cl_sm">See full cast</a></p>
+                            <div class="cast-list">
+                                <ul class="content">
+                                    <li>Millie Bobby Brown</li>
+                                    <li>Finn Wolfhard</li>
+                                    <li>Winona Ryder</li>
+                                    <li>David Harbour</li>
+                                    <li>Gaten Matarazzo</li>
+                                    <li>Caleb McLaughlin</li>
+                                    <li>Natalia Dyer</li>
+                                    <li>Charlie Heaton</li>
+                                    <li>Joe Keery</li>
+                                    <li>Cara Buono</li>
+                                    <li>Noah Schnapp</li>
+                                    <li>Sadie Sink</li>
+                                    <li>Priah Ferguson</li>
+                                    <li>Joe Chrest</li>
+                                    <li>Matthew Modine</li>
+                                    <li>Dacre Montgomery</li>
+                                    <li>Maya Hawke</li>
+                                    <li>Brett Gelman</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-content" id="production">
+                            <!-- Director -->
+                            <p class="title">Director <a href="https://www.imdb.com/title/tt4574334/fullcredits/?ref_=tt_cl_sm">See full production</a></p>
+                            <div class="cast-list">
+                                <ul class="content">
+                                    <li>Matt Duffer</li>
+                                    <li>Ross Duffer</li>
+                                    <li>Shawn Levy</li>
+                                    <li>Andrew Stanton</li>
+                                    <li>Uta Briesewitz</li>
+                                    <li>Rebecca Thomas</li>
+                                </ul>
+                            </div>
+                            <p class="title">Series Producers</p>
+                            <div class="cast-list">
+                            <ul class="content">
+                                <li>Matt Duffer</li>
+                                <li>Ross Duffer</li>
+                                <li>Shawn Levy</li>
+                                <li>Dan Cohen</li>
+                                <li>Rand Geiger</li>
+                                <li>Iain Paterson</li>
+                                <li>Emily Morris</li>
+                                <li>Justin Doble</li>
+                                <li>Curtis Gwinn</li>
+                                <li>Brian Wright</li>
+                                <li>Karl Gajdusek</li>
+                                <li>Cindy Holland</li>
+                                <li>Jessica Mecklenburg</li>
+                                <li>Alison Tatlock</li>
+                                <li>Matthew Thunell</li>
+                                <li>William Bridges</li>
+                                <li>Paula Kramer</li>
+                                
+                            </ul>
+                            </div>
+                            <p class="title">Series Writing Credits</p>
+                            <div class="cast-list">
+                                <ul class="content">
+                                    <li>Matt Duffer</li>
+                                    <li>Ross Duffer</li>
+                                    <li>Paul Dichter</li>
+                                    <li>Jessie Nickson-Lopez</li>
+                                    <li>Kate Trefry</li>
+                                    <li>Justin Doble</li>
+                                    <li>Curtis Gwinn</li>
+                                    <li>Jessica Mecklenburg</li>
+                                    <li>Alison Tatlock</li>
+                                    <li>William Bridges</li>
+                            </ul>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="mirar-community-tab" id="review-tab-div">
+                        <div class="exclusive-container">
+                            <div class="prompt">You have to sign-in to read reviews</div>
+                            <div class="exclusive-button-container">
+                                <button class="exclusive-button">Sign-in</button>
+                                <span>OR</span>
+                                <button class="exclusive-button">Sign-up</button>
+                            </div>
+                        </div>
+                        <div class="reviewer">
+                            <div class="review-photo-container">
+                                <img class="reviewer-photo" src="https://scontent.fceb2-2.fna.fbcdn.net/v/t39.30808-6/264766548_2689036574737683_968917969423937813_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeHgy4F-rmW7fdYqN1VrYtqeccsL62NYvdpxywvrY1i92il8R5bmNLc5R6S2KNNK1eCT-2Fj6hFK2nrF8pAbAL8Q&_nc_ohc=TEr1jNREpA8AX9H_8dz&_nc_ht=scontent.fceb2-2.fna&oh=6182b2ca0c4686ee0819489420fca659&oe=61B772A8" alt="reviewer-photo">
+                            </div>
+                            <div class="review-content-container">
+                                <div class="reviewer-username">mayflor_layan</div>
+                                <p class="review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit minus laudantium 
+                                    labore sunt hic ab nostrum doloribus aliquid vitae! Ipsa, molestiae aspernatur. Qui ducimus optio 
+                                    praesentium veniam sed fugiat deleniti?</p>
+                                <div class="reacts">
+                                    <button><i class="bi bi-caret-up-fill"></i><p class="count">178</p></button>
+                                    <button><i class="bi bi-caret-down"></i><p class="count">1.8K</p></button>
+                                    <button>Reply</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviewer">
+                            <div class="review-photo-container">
+                                <img class="reviewer-photo" src="https://c.tenor.com/3L_71ll8HJcAAAAd/jungkook-holding-face.gif" alt="reviewer-photo">
+                            </div>
+                            <div class="review-content-container">
+                                <div class="reviewer-username">abcdefghi__klmnopqrstuvwxyz</div>
+                                <p class="review">무지개저럼 (무지개저럼) 지워진 꿈을 찾아 헤맸을까 운명같은 흔한 말관 달라 
+                                    아픈 너의 눈빛이 나와 같은 것을 보는 걸 Won't you please stay in dreams yeah</p>
+                                <div class="reacts">
+                                    <button><i class="bi bi-caret-up-fill"></i><p class="count">101K</p></button>
+                                    <button><i class="bi bi-caret-down"></i><p class="count">10</p></button>
+                                    <button>Reply</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviewer">
+                            <div class="review-photo-container">
+                                <img class="reviewer-photo" src="https://scontent.fceb2-2.fna.fbcdn.net/v/t1.6435-9/48389912_746467682371261_686907738990575616_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=174925&_nc_eui2=AeFTXpCdpKHmeYKpRjAAwmRM5DndalexnwPkOd1qV7GfAxQw0TgpcgEPr99ivGO-zCECtrHl9x0NlWvFsyAugwq5&_nc_ohc=93qcbjMG4G4AX9LjdhB&_nc_ht=scontent.fceb2-2.fna&oh=bbfa502c342ea8b0e461d06201accbfc&oe=61D88417" alt="reviewer-photo">
+                            </div>
+                            <div class="review-content-container">
+                                <div class="reviewer-username">f.chord_girl</div>
+                                <p class="review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit minus laudantium 
+                                    labore sunt hic ab nostrum doloribus aliquid vitae! Ipsa, molestiae aspernatur. Qui ducimus optio 
+                                    praesentium veniam sed fugiat deleniti?</p>
+                                <div class="reacts">
+                                    <button><i class="bi bi-caret-up-fill"></i><p class="count">200</p></button>
+                                    <button><i class="bi bi-caret-down"></i><p class="count"></p></button>
+                                    <button>Reply</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviewer">
+                            <div class="review-photo-container">
+                                <img class="reviewer-photo" src="https://pyxis.nymag.com/v1/imgs/ba2/f85/099d4651e7c4a62bcba5da1fbc5c16be70-18-taylor-swift.rsquare.w1200.jpg" alt="reviewer-photo">
+                            </div>
+                            <div class="review-content-container">
+                                <div class="reviewer-username">taylorswift</div>
+                                <p class="review">And you call me up again just to break me like a promise, so casually cruel in the name of being honest. I'm a crumpled up piece of paper 
+                                    lying here, 'cause I remember it all, all, all too well</p>
+                                <div class="reacts">
+                                    <button><i class="bi bi-caret-up-fill"></i><p class="count">1M</p></button>
+                                    <button><i class="bi bi-caret-down"></i><p class="count"></p></button>
+                                    <button>Reply</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviewer">
+                            <div class="review-photo-container">
+                                <img class="reviewer-photo" src="https://www.biography.com/.image/t_share/MTE4MDAzNDEwNzk1MjAyMDYy/jake-gyllenhaal-16242387-1-402.jpg" alt="reviewer-photo">
+                            </div>
+                            <div class="review-content-container">
+                                <div class="reviewer-username">jakegyllenhaal</div>
+                                <p class="review">I have no words but a scarf.</p>
+                                <div class="reacts">
+                                    <button><i class="bi bi-caret-up-fill"></i><p class="count">5</p></button>
+                                    <button><i class="bi bi-caret-down"></i><p class="count">100K</p></button>
+                                    <button>Reply</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="episode-tab" id="episode-tab-div">
+                        <div class="season-selector">
+                            <select id="select" onchange="showSeason(this)">
+                                <option value="" disabled selected>Season</option>
+                                <option value="3">Season 3</option>
+                                <option value="2">Season 2</option>
+                                <option value="1">Season 1</option>
+                            </select>
+                            <div class="season" id="season3">
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>01</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">SUZY, DO YOU COPY?</div>
+                                        <p>
+                                            In June 1984, Soviet scientists attempt to force open a new gate to the Upside Down. 
+                                            One year later in Hawkins, the popularity of the new Starcourt Mall has forced many 
+                                            local businesses to close, angering townspeople. Mike and Eleven have begun a romantic 
+                                            relationship, much to Hopper's chagrin; he later threatens Mike into agreeing not to 
+                                            see her. Dustin returns from summer camp and sets up a radio tower to contact his new 
+                                            girlfriend, Suzie, but instead intercepts a Russian transmission. 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>02</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">THE MALL RATS</div>
+                                        <p>
+                                            Billy escapes the mill after the creature induces in him a vision of the Upside Down where 
+                                            he meets a doppelgänger. Tormented by further visions and voices, Billy is guided by the 
+                                            creature into kidnapping his fellow lifeguard Heather Holloway and bringing her to the 
+                                            creature. Nancy and Jonathan, working as interns at the Hawkins Post, investigate the home 
+                                            of Ms. Driscoll, an elderly woman concerned about rabid rats eating her fertilizer
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>03</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">THE CASE OF THE MISSING LIFEGUARD</div>
+                                        <p>
+                                            Eleven uses her powers to spy on Mike and later Billy, who senses her presence. She and 
+                                            Max discover that Billy has gone missing. Nancy and Jonathan find reports of missing 
+                                            fertilizer and strange behavior among rats across town, and discover Ms. Driscoll herself 
+                                            eating fertilizer in her home. Robin decodes the Russian communication, which points to 
+                                            a shipment arriving at Starcourt that night; she, Steve and Dustin spot armed Russian 
+                                            soldiers make the delivery. 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>04</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">SAUNA TEST</div>
+                                        <p>
+                                            Billy and Heather bring her parents to the mill, where they are possessed by the Mind Flayer. 
+                                            Hopper recalls Grigori meeting with town mayor Larry Kline; he and Joyce force Kline to reveal 
+                                            that Starcourt Mall is a Russian front buying abandoned properties across Hawkins. Will reveals 
+                                            his connection with the Mind Flayer to Mike, Lucas, Eleven, and Max, speculating that it has 
+                                            possessed Billy. They devise a plan to trap Billy in the pool's sauna to confirm he is possessed, 
+                                            but Billy escapes and nearly kills them until Eleven subdues him. 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>05</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">THE FLAYED</div>
+                                        <p>
+                                            Hopper and Joyce search one of the abandoned properties, discovering a hidden laboratory. 
+                                            Grigori arrives to kill them, and they narrowly escape with a hostage – a Russian scientist 
+                                            named Alexei – in tow. Dustin, Steve, Robin, and Erica arrive in a Russian lab underneath 
+                                            Starcourt and hide from Russian soldiers unloading crates from the elevator. As Alexei does 
+                                            not speak English, Hopper and Joyce take him to Murray – the only Russian speaker they know 
+                                            – to translate. 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>06</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">E PLURIBUS UNUM</div>
+                                        <p>
+                                            Eleven, who had just then reconciled with Mike, uses her powers to incapacitate the Mind 
+                                            Flayer, forcing it to flee to the mill. In the Russian lab beneath Starcourt, Steve and 
+                                            Robin are captured, drugged, and interrogated, but Dustin and Erica manage to rescue them. 
+                                            With Murray translating, Hopper and Joyce hold Alexei hostage, forcing him to reveal that 
+                                            the Russians are attempting to access the Upside Down and that they are opening a portal 
+                                            beneath Starcourt. 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>07</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">THE BITE</div>
+                                        <p>
+                                            Eleven and the others determine the Mind Flayer is coming for her since she was the one who 
+                                            previously closed the gate. Will senses the Mind Flayer approaching and it attacks them 
+                                            before they flee, wounding Eleven. Steve admits that he has feelings for Robin as Hopper's 
+                                            group make their way to the fairgrounds in Hawkins to find the children where they are 
+                                            spotted by Kline, who alerts the Russians. Alexei is fatally shot by Grigori in front of 
+                                            Murray. Murray, Hopper, and Joyce evade several Soviet agents and learn the agents are 
+                                            looking for the children at the mall.  
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>08</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">THE BATTLE OF STARCOURT</div>
+                                        <p>
+                                            Eleven rids herself of the piece of the Mind Flayer embedded in her wound, rendering her 
+                                            powerless. Hopper's group arrives and plans are made to take Eleven's group to safety, 
+                                            while Hopper, Joyce, and Murray destroy the machine, with Dustin and Erica navigating 
+                                            them from his radio tower. Billy sacrifices himself protecting Eleven, Mike and Max. 
+                                            Hopper fights and kills Grigori, getting trapped with the machine in the process. Out 
+                                            of time, Joyce is forced to trigger the explosion, closing the gate, with Hopper being 
+                                            seemingly disintegrated in the process. 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="season" id="season2">
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>01</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">MADMAX</div>
+                                        <p>
+                                            El is now part of a criminal gang that manages to rob a bank and get away 
+                                            in Pittsburgh, Pennsylvania. While in Hawkins, the town prepares for Halloween 
+                                            while a new girl at school, captures the boys' attention. 
+                                            Joyce and Hopper take Will to see the lab's new director Dr. Sam Owens, who has 
+                                            been giving Will routine medical exams and theorizing that Will's episodes are 
+                                            PTSD brought on by the anniversary of his disappearance. 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>02</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">TRICK OR TREAT</div>
+                                        <p>
+                                            After Eleven escaped from the Upside Down, She was forced to hide from agents. 
+                                            As Nancy wants to tell Barb's parents the truth about her death, Steve forbid her thinking it is a bad idea. 
+                                            as the agents might come after them if they told anyone the truth. As the boys go trick-or-treating 
+                                            and are later joined by Max. During the night, Will has another episode and tells Mike about 
+                                            his visions, leading Mike to admit that he is trying to contact Eleven. 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>03</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">THE POLLYWOG</div>
+                                        <p>
+                                            After Dustin found a strange creature his trash that looked like small, slug-like animal, he shows 
+                                            it to the other kids and Will concludes that it is from the Upside Down, as it makes a noise similar 
+                                            to one Will heard in his hallucinations. 
+                                            As Hopper, becoming increasingly concerned about the pumpkin fields, he accuses Owens of 
+                                            failing to keep the gate contained. 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>04</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">WILL THE WISE</div>
+                                        <p>
+                                            Joyce and the kids awaken an unconscious Will and takes him home but finds him acting strangely, 
+                                            drawing scribbles on pages and demanding that the house be kept cold. Joyce calls Hopper and 
+                                            together they discover the scribbles line up. An infatuated Lucas tries to get closer to Max, 
+                                            but her violent older stepbrother Billy Hargrove intervenes. Eleven argues with Hopper over her 
+                                            sneaking out, culminating in her destroying the cabin's windows in a fit of rage. 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>05</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">DIG DUG</div>
+                                        <p>
+                                            Hopper becomes trapped in the tunnels and passes out. Lucas reveals the truth of Will's 
+                                            disappearance to Max to gain her respect. Dustin traps Dart in his basement and enlists Steve's 
+                                            help to recapture it. Eleven tracks down Terry and Becky Ives. Terry and Eleven are able to 
+                                            communicate using their psychic powers and Terry reveals to Eleven that she tried to rescue 
+                                            her at the lab and was subjected to a brain-damaging dose of shock therapy by Brenner. 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>06</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">THE SPY</div>
+                                        <p>
+                                            Will is rushed to the lab, demonstrating memory loss and Owens theorizes that the shadow 
+                                            monster is a virus which has spread to Will's brain and is controlling him. 
+                                            Upon returning to the Byers house, Nancy and Jonathan discover Will's drawings. 
+                                            Lucas and Max regroup with Dustin and Steve and the group 
+                                            attempt to lure Dart to a junkyard. To the group's horror, Dart arrives, flanked by 
+                                            a pack of adolescent monsters. The group is cornered until the pack unexpectedly runs away.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>07</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">THE LOST SISTER</div>
+                                        <p>
+                                            Eleven travels to Chicago, Illinois, and finds the other girl from Terry's memories, named Kali. 
+                                            Realizing they have similar tattoos and were both experimented on by Brenner, Eleven and Kali 
+                                            consider themselves sisters. Kali has the ability to project images into people's minds and 
+                                            lives among a street gang, who seek revenge on Brenner. Kali helps Eleven to hone her abilities 
+                                            by demonstrating that channeling her anger is the key to strengthening her powers. 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>08</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">THE MIND FLAYER</div>
+                                        <p>
+                                            The pack of creatures attack the lab, killing most of the scientists. Realizing 
+                                            that Will is a spy for the monster, Mike convinces Joyce to sedate Will to prevent 
+                                            the creatures from tracking them. Mike, Joyce, Hopper, Bob and Owens take Will's 
+                                            unconscious body to the lab's security room to barricade themselves from the 
+                                            creatures. The lab's power goes out and Bob volunteers to reset the breakers 
+                                            and allow the group to escape. Bob's mission succeeds, allowing Mike, Joyce, 
+                                            Hopper and Will to escape. 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>09</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">THE GATE</div>
+                                        <p>
+                                            After a brief reunion, Eleven and the group devise a plan to close the gate 
+                                            without killing Will. To prevent the creatures from attacking Hopper and Eleven, 
+                                            Mike, Dustin, Lucas, Max and Steve plan to enter the tunnels to lure the pack. 
+                                            Billy arrives at the Byers house, having been instructed to find Max by his father, 
+                                            and gets into a fight with Steve. Max manages to sedate him, and the group enter the 
+                                            tunnels to enact their plan. 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="season" id="season1">
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>01</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">WILL DISAPPEARS</div>
+                                        <p>
+                                            The nerdy but cool Mike, Will, Dustin and Lucas 
+                                            slay imaginary monsters from a saturated brown basement in 
+                                            '80s-set Hawkins, Indiana was playing thier dice-roling game.
+                                            However, one night, when  Will, is attacked
+                                            by a shadowy monster, his disappearance kicks off the odd events that leave the small 
+                                            town battered and bruised for years to come. 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>02</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">THE WEIRDO IN THE MAPLE STREET</div>
+                                        <p>
+                                            While a town-wide search for Will ensues, a young, near-mute girl with an 
+                                            unmissable shaved head, hospital gown and the ability to move objects 
+                                            with her mind. Using that power to evade capture by generic government agents, 
+                                            she ends up meeting the boys mid-search for Will in the woods. 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>03</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">HOLLY, JOLLY</div>
+                                        <p>
+                                            While a frantic Will's mom and the Hawkins Police Department Chief Jim Hopper -- who 
+                                            himself suffered the bereavement of his daughter to cancer -- lead the search for Will, 
+                                            Nancy Wheeler, Mike's older sister, and her best friend Barb nip out to a pool party at 
+                                            Nancy's boyfriend's house. Occupied by Steve Harrington and his immaculate quiff, Nancy 
+                                            fails to notice her best friend's violent abduction by what is dubbed a Demogorgon, 
+                                            essentially a Guillermo del Toro Pale Man with a venus flytrap for a head.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>04</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">THE BODY</div>
+                                        <p>
+                                            Christmas lights have never been more essential than when Will uses them to somehow 
+                                            communicate from the Upside Down with Joyce Byers, his ever-crazed-seeming mom. He 
+                                            flicks the Christmas decorations on and off to correspond with letters Joyce has 
+                                            etched onto their living room wall, cementing in her mind that he's still alive. 
+                                            Refusing to believe Will is dead, Joyce tries to connect with her son. 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>05</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">THE FLEA AND THE ACROBAT</div>
+                                        <p>
+                                            With the conspiracy in full swing, government agents get a whiff that El, is living with Mike. 
+                                            They and their fleet of white vans go after the friends, but before they can kidnap El again -- 
+                                            she was taken as a baby by Dr. Brenner from her now near-brain-dead birth mother, Terry Ives. 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>06</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">THE MONSTER</div>
+                                        <p>
+                                            The boys, with the help of Hopper and their baffled science teacher, utilize a paddle pool, 
+                                            goggles and duct tape to build a way for El to amplify her powers to search the Upside Down 
+                                            for Will. The good news is that El finds Will, unconscious, but still alive. All Hopper and 
+                                            Joyce have to do now is race over to Hawkins Lab and through the entrance to the Upside Down.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>07</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">THE BATHTUB</div>
+                                        <p>
+                                            Eleven struggles to reach Will, while Lucas warns that "the bad men are coming." 
+                                            Nancy and Jonathan show the police what Jonathan caught on camera. With Hopper and 
+                                            Joyce preoccupied with safely rescuing Will, the government agents, working with 
+                                            Hawkins Lab, swarm the school. Blood is spilled, attracting the Demogorgon, who's 
+                                            immune to Lucas' slingshotted rocks, but not to the fierce El, who disintegrates 
+                                            the monster.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>08</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">THE UPSIDE-DOWN</div>
+                                        <p>
+                                            Dr. Brenner holds Hopper and Joyce for questioning while the boys wait with Eleven in 
+                                            the gym. Back at Will's, Nancy and Jonathan prepare for battle. It's several months 
+                                            later and Will is returned to his family, though the effects of his trauma remain. 
+                                            This is no clearer than when he burps up a black slug -- not ideal after everything 
+                                            he's already been through. 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+    <script src="..\js\nav-scroll.js"></script>
+    <script src="..\js\series.js"></script>
+    <script src="..\js\webpages-js\three-season.js"></script>
+    <script src="..\js\modal.js"></script>
+</html>

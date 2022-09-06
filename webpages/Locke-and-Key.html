@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="..\src\title-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css" integrity="sha384-7ynz3n3tAGNUYFZD3cWe5PDcE36xj85vyFkawcF6tIwxvIecqKvfwLiaFdizhPpN" crossorigin="anonymous">
+    <link rel="stylesheet" href="..\css\index-style.css">
+    <link rel="stylesheet" href="..\css\nav-style.css">
+    <link rel="stylesheet" href="..\css\scrollbar-style.css">
+    <link rel="stylesheet" href="..\css\webpages-styles\series-style.css">
+    <link rel="stylesheet" href="../css/modal-style.css">
+    <title>Mirar  |  Series</title>
+</head>
+<body>
+    <div class="scroll-trigger1"><a id="top"></a></div>
+    <header class="movie-header">
+        <nav class="nav-bar">
+            <div>
+                <a class="logo" href="../index.html">Mirar</a>
+            </div>
+            <ul class="nav-list">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown-title" id="title1"><p>Browse</p>
+                    <div class="arrow-up" id="dropdown-menu1-arrow" name="dropdown" ></div>
+                    <div class="dropdown" id="dropdown-menu1">
+                        <ul class="dropdown-menu1-list">
+                            <li><a href="browse/movies-list.html">Movies</a></li>
+                            <li><a href="browse/series-list.html">Series</a></li>
+                            <li><a href="browse/available-in-cd-list.html">Available in CD</a></li>
+                            <hr class="hr-text" data-content="GENRES">
+                            <li><a href="browse/genre-action.html">Action</a></li>
+                            <li><a href="browse/genre-adventure.html">Adventure</a></li>
+                            <li><a href="browse/genre-animation.html">Animation</a></li>
+                            <li><a href="browse/genre-biography.html">Biography</a></li>
+                            <li><a href="browse/genre-comedy.html">Comedy</a></li>
+                            <li><a href="browse/genre-crime.html">Crime</a></li>
+                            <li><a href="browse/genre-drama.html">Drama</a></li>
+                            <li><a href="browse/genre-family.html">Family</a></li>
+                            <li><a href="browse/genre-fantasy.html">Fantasy</a></li>
+                            <li><a href="browse/genre-history.html">History</a></li>
+                            <li><a href="browse/genre-horror.html">Horror</a></li>
+                            <li><a href="browse/genre-kdrama.html">K-Drama</a></li>
+                            <li><a href="browse/genre-lgbtq.html">LGBTQ+</a></li>
+                            <li><a href="browse/genre-musical.html">Musical</a></li>
+                            <li><a href="browse/genre-Mystery.html">Mystery</a></li>
+                            <li><a href="browse/genre-Romance.html">Romance</a></li>
+                            <li><a href="browse/genre-scifi.html">Sci-Fi</a></li>
+                            <li><a href="browse/genre-thriller.html">Thriller</a></li>
+                            <li><a href="browse/genre-war.html">War</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="dropdown-title" id="title2"><p>Year</p>
+                    <div class="arrow-up" id="dropdown-menu2-arrow"></div>
+                        <div class="dropdown" id="dropdown-menu2" class="nav-scrolled">
+                            <ul>
+                                <li><a href="browse/year-2021.html">2021</a></li>
+                                <li><a href="browse/year-2020.html">2020</a></li>
+                                <li><a href="browse/year-2019.html">2019</a></li>
+                                <li><a href="browse/year-2018.html">2018</a></li>
+                                <li><a href="browse/year-2017.html">2017</a></li>
+                                <li><a href="browse/year-2016.html">2016</a></li>
+                                <li><a href="browse/year-2013.html">2013</a></li>
+                                <li><a href="browse/year-2011.html">2011</a></li>
+                                <li><a href="browse/year-2010.html">2010</a></li>
+                                <li><a href="browse/year-2009.html">2009</a></li>
+                                <li><a href="browse/year-2007.html">2007</a></li>
+                                <li><a href="browse/year-2006.html">2006</a></li>
+                                <li><a href="browse/year-2005.html">2005</a></li>
+                                <li><a href="browse/year-2004.html">2004</a></li>
+                                <li><a href="browse/year-2002.html">2002</a></li>
+                                <li><a href="browse/year-2001.html">2001</a></li>
+                                <li><a href="browse/year-1998.html">1998</a></li>
+                                <li><a href="browse/year-1997.html">1997</a></li>
+                                <li><a href="browse/year-1993.html">1993</a></li>
+                            </ul>
+                        </div>
+                </li>
+            </ul>
+            <div class="search-box">
+                <input id="search-bar" type="text" placeholder="Search films or series">
+                <button class="nav-button" id="search-button" onclick="search()" type="submit">
+                    <i class="bi bi-search"></i>
+                </button>
+            </div>
+            <div class="account-menu">
+                <button class="nav-button" id="account-menu-button">
+                    <i class="bi bi-person-circle">
+                        <div class="arrow-up" id="dropdown-menu3-arrow"></div>
+                        <div class="dropdown" class="account-menu-contents" id="dropdown-menu3">
+                            <ul>
+                                <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-toggles2"></i>Settings</a></li>
+                                <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-bookmarks-fill"></i>Bookmarks</a></li>
+                                <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-book-fill"></i>History</a></li>
+                                <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-cart-check-fill"></i>Purchased and Rented</a></li>
+                                <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-cart4"></i>Shopping Cart</a></li>
+                                <li><a href="javascript:void(0);" onclick="displayModal()"><i class="bi bi-box-arrow-in-right"></i>Sign-in</a></li>
+                                <hr id="account-menu-contents-separator"/>
+                                <li><a href="new-account.html"><i class="bi bi-person-fill"></i>Sign-up</a></li>
+                            </ul>
+                        </div>
+                    </i>
+                </button>
+            </div>
+        </nav>
+        <div class="movie-trailer-container" id="iframe-container">
+            <button id="movie-trailer-play-button" onclick="playTrailerAgain()">
+                <i class="bi bi-play-fill"></i>
+                <p>Play again</p>
+            </button>
+            <!-- Movie Trailer -->
+            <iframe id="video" src="https://www.youtube.com/embed/_EonRi0yQOE?enablejsapi=1&html5=1&vq=hd1080&fs=0&controls=0&start=0&cc_load_policy&rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </header>
+    <section class="modal" id="login-modal">
+        <div class="modal-content-container">
+            <div class="close-button-container">
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-title">
+                <p>You are few clicks away from watching your favorite movies and series</p>
+            </div>
+            <div class="other-login-option-container">
+                <div class="other-login-option">
+                    <i class="bi bi-google"></i>
+                    <hr>
+                    <button class="other-login-option-button" onclick="noService()">Login with Google</button>
+                </div>
+                <div class="other-login-option">
+                    <i class="bi bi-facebook"></i>
+                    <hr>
+                    <button class="other-login-option-button" onclick="noService()">Login with Facebook</button>
+                </div>
+            </div>
+            <div class="login-form-container">
+                <form>
+                    <div class="input-field">
+                        <input type="text" autocomplete="off" autofocus required>
+                        <label class="floating-label">Username or Email</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" autocomplete="off" autofocus required>
+                    <label class="floating-label">Password</label>
+                    </div>
+                    <div class="bottom-field">
+                        <input type="checkbox" name="remember-login" id="remember-login" value="remember-login" checked>
+                        <label for="remember-login">Remember me</label>
+                        <a href="#">Forgot password?</a>
+                    </div>
+                    <div class="signin-button-container">
+                        <button id="signin-button" onclick="noService()">Sign-in</button>
+                    </div>
+                    <div class="divider-container">
+                        <hr>
+                        <span>OR</span>
+                    </div>
+                    <div class="sign-up-button-container">
+                        <a class="new-account-button" href="new-account.html">Create New Account</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <main>
+        <div class="movie-poster-container" id="poster-container">
+            <!-- Movie Poster -->
+            <img src="https://m.media-amazon.com/images/M/MV5BNjZkNzY4M2ItOWY0Ni00Y2ViLWE1NjItOTIyYzZjMzg5M2E1XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg" alt="movie-poster">
+            <div class="commercial-buttons-container">
+                <!-- Prices -->
+                <div class="buy-button-container">
+                    <button class="commercial-button" id="buy-button" onclick="displayModal()"><p class="price">₱755.00</p>Buy</button>
+                </div>
+                <div class="rent-button-container">
+                    <button class="commercial-button" id="rent-button" onclick="displayModal()"><p class="price">₱100.00</p>Rent</button>
+                </div>
+                <div class="buy-in-cd-button-container">
+                    <!-- Change button text if unavailable -->
+                    <button class="commercial-button" id="buy-in-cd-button-unavailable" title="Unavailable for Purchase"><p class="price">Unavailable in CD</p>Buy in CD</button>
+                </div>
+            </div>
+        </div>
+        <div class="movie-content-container">
+            <div class="left-space"></div>
+            <div class="movie-content">
+                <div class="title-and-button-container">
+                    <!-- Movie Title -->
+                    <p id="movie-title">Locke and Key</p>
+                    <div class="buttons-container">
+                        <button class="buttons" class="buttonUpper" onclick="displayModal()">
+                            <span class="guide" id="guide1">Add to Bookmarks</span> 
+                            <i class="bi bi-bookmark-plus-fill"></i>             
+                        </button>
+                        <button class="buttons" class="buttonUpper" onclick="displayModal()">
+                            <span class="guide" id="guide2">Add to Cart</span>     
+                            <i class="bi bi-cart-plus-fill"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- Movie year release and audience rating -->
+                <p id="movie-year">2020-2021 ● TV-PG 18+</p>
+                <!-- Mirar community rating -->
+                <div class="rating" id="star-rating" title="Mirar Community rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <i class="bi bi-star"></i>
+                </div>
+                  <!-- Movie genres and if movie or series-->
+                <div class="genres" id="movie-genres">
+                    <a href="browse/genre-drama.html">Drama</a>
+                    <a href="browse/genre-fantasy.html">Fantasy</a>
+                    <a href="browse/genre-horror.html">Horror</a>
+                </div>
+                <!-- Movie synopsis -->
+                <p id="movie-synopsis">
+                    After Rendell Locke is murdered at the hands of former student Sam Lesser, 
+                    his wife Nina decides to move with her three children, Tyler, Kinsey, and 
+                    Bode, from Seattle to Matheson, Massachusetts, and take residence in Rendell's 
+                    family home named Keyhouse. The children soon discover a number of mysterious keys 
+                    throughout the house that can be used to unlock various doors in magical ways. 
+                    They soon become aware, though, of a demonic entity that is also searching for 
+                    the keys for its own malevolent purposes.
+                </p>
+                
+                <div class="external-rating-container">
+                    <!-- Rating from IMDb -->
+                    <div class="external-rating" id="imdb-rating">
+                        <a href="https://www.imdb.com/title/tt3007572/ratings/?ref_=tt_ov_rt">
+                            <img src="https://1000logos.net/wp-content/uploads/2020/08/Imdb-logo.png" alt="external-critic"> IMDb Rating: </a>7.4/10
+                    </div>
+                    <!-- Rating from Rotten tomatoes-->
+                    <div class="external-rating" id="rotten-rating">
+                        <a href="https://www.rottentomatoes.com/tv/locke_key"> 
+                            <img src="https://www.rottentomatoes.com/assets/pizza-pie/images/icons/tomatometer/tomatometer-fresh.149b5e8adc3.svg" alt="external-critic"> Rotten Tomatoes: </a>74%
+                    </div>
+                </div>
+                <hr/>
+                <a id="cast"></a>
+                <div class="tab-buttons-container">
+                    <button class="credits-tab-active" class="tab" id="credits-tab" onclick="creditsActive()">Credits</button>
+                    <button class="episode-tab-inactive" class="tab" id="episode-tab" onclick="episodeActive()">Episodes</button>
+                    <button class="review-tab-inactive" class="tab"  id="review-tab" onclick="reviewActive()">Mirar Community Reviews</button>
+                </div>
+                <div class="tabs-container">       
+                    <div class="credits-tab" id="credits-tab-div">
+                        <div class="tab-content" id="cast">
+                            <!-- Cast section -->
+                            <p class="title">Cast <a href="https://www.imdb.com/title/tt3007572/fullcredits?ref_=tt_ov_st_sm">See full cast</a></p>
+                            <div class="cast-list">
+                                <ul class="content">
+                                    <li>Darby Stanchfield</li>
+                                    <li>Connor Jessup</li>
+                                    <li>Emilia Jones</li>
+                                    <li>Jackson Robert Scott</li>
+                                    <li>Petrice Jones</li>
+                                    <li>Laysla De Oliveira</li>
+                                    <li>Griffin Gluck</li>
+                                    <li>Aaron Ashmore</li>
+                                    <li>Hallea Jones</li>
+                                    <li>Genevieve Kang</li>
+                                    <li>Asha Bromfield</li>
+                                    <li>Sherri Saum</li>
+                                    <li>Jesse Camacho</li>
+                                    <li>Kevin Alves</li>
+                                    <li>Kolton Stewart</li>
+                                    <li>Brendan Hines</li>
+                                    <li>Coby Bird</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-content" id="production">
+                            <!-- Director -->
+                            <p class="title">Director <a href="https://www.imdb.com/title/tt3007572/fullcredits?ref_=tt_ov_st_sm">See full production</a></p>
+                            <div class="cast-list">
+                                <ul class="content">
+                                    <li>Mairzee Almas</li>
+                                    <li>Michael Morris</li>
+                                    <li>Vincenzo Natali</li>
+                                    <li>Tim Southam</li>
+                                    <li>Mark Tonderai</li>
+                                    <li>Dawn Wilkinson</li>
+                                    <li>Millicent Shelton</li>
+                                    <li>Carlton Cuse</li>
+                                    <li>Edward Ornelas</li>
+                                </ul>
+                            </div>
+                            <p class="title">Series Producers</p>
+                            <div class="cast-list">
+                            <ul class="content">
+                                <li>Álex Pina</li>
+                                <li>Jesús Colmenar</li>
+                                <li>Esther Martínez Lobato</li>
+                                <li>Pedro García Caja</li>
+                                <li>Nacho Manubens</li>
+                                <li>Sonia Martínez</li>
+                                <li>Cristina López Ferraz</li>
+                                <li>Laia Coll</li>
+                                <li>Migue Amoedo</li>
+                                <li>Javier Gómez Santander</li>
+                            </ul>
+                            </div>
+                            <p class="title">Series Writing Credits</p>
+                            <div class="cast-list">
+                                <ul class="content">
+                                <li>Meredith Averill</li>
+                                <li>Aron Eli Coleite</li>
+                                <li>Carlton Cuse</li>
+                                <li>Joe Hill</li>
+                                <li>Gabriel Rodriguez</li>
+                                <li>Kenna Trent</li>
+                                <li>Michael D. Fuller</li>
+                                <li>Vanessa Rojas</li>
+                                <li>Liz Phang</li>
+                                <li>Mackenzie Dohr</li>
+                                <li>Andres Fischer-Centeno</li>
+                                <li>Brett Treacy</li>
+                                <li>Dan Woodward</li>
+                            </ul>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="mirar-community-tab" id="review-tab-div">
+                        <div class="exclusive-container">
+                            <div class="prompt">You have to sign-in to read reviews</div>
+                            <div class="exclusive-button-container">
+                                <button class="exclusive-button">Sign-in</button>
+                                <span>OR</span>
+                                <button class="exclusive-button">Sign-up</button>
+                            </div>
+                        </div>
+                        <div class="reviewer">
+                            <div class="review-photo-container">
+                                <img class="reviewer-photo" src="https://scontent.fceb2-2.fna.fbcdn.net/v/t39.30808-6/264766548_2689036574737683_968917969423937813_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeHgy4F-rmW7fdYqN1VrYtqeccsL62NYvdpxywvrY1i92il8R5bmNLc5R6S2KNNK1eCT-2Fj6hFK2nrF8pAbAL8Q&_nc_ohc=TEr1jNREpA8AX9H_8dz&_nc_ht=scontent.fceb2-2.fna&oh=6182b2ca0c4686ee0819489420fca659&oe=61B772A8" alt="reviewer-photo">
+                            </div>
+                            <div class="review-content-container">
+                                <div class="reviewer-username">mayflor_layan</div>
+                                <p class="review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit minus laudantium 
+                                    labore sunt hic ab nostrum doloribus aliquid vitae! Ipsa, molestiae aspernatur. Qui ducimus optio 
+                                    praesentium veniam sed fugiat deleniti?</p>
+                                <div class="reacts">
+                                    <button><i class="bi bi-caret-up-fill"></i><p class="count">178</p></button>
+                                    <button><i class="bi bi-caret-down"></i><p class="count">1.8K</p></button>
+                                    <button>Reply</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviewer">
+                            <div class="review-photo-container">
+                                <img class="reviewer-photo" src="https://c.tenor.com/3L_71ll8HJcAAAAd/jungkook-holding-face.gif" alt="reviewer-photo">
+                            </div>
+                            <div class="review-content-container">
+                                <div class="reviewer-username">abcdefghi__klmnopqrstuvwxyz</div>
+                                <p class="review">무지개저럼 (무지개저럼) 지워진 꿈을 찾아 헤맸을까 운명같은 흔한 말관 달라 
+                                    아픈 너의 눈빛이 나와 같은 것을 보는 걸 Won't you please stay in dreams yeah</p>
+                                <div class="reacts">
+                                    <button><i class="bi bi-caret-up-fill"></i><p class="count">101K</p></button>
+                                    <button><i class="bi bi-caret-down"></i><p class="count">10</p></button>
+                                    <button>Reply</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviewer">
+                            <div class="review-photo-container">
+                                <img class="reviewer-photo" src="https://scontent.fceb2-2.fna.fbcdn.net/v/t1.6435-9/48389912_746467682371261_686907738990575616_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=174925&_nc_eui2=AeFTXpCdpKHmeYKpRjAAwmRM5DndalexnwPkOd1qV7GfAxQw0TgpcgEPr99ivGO-zCECtrHl9x0NlWvFsyAugwq5&_nc_ohc=93qcbjMG4G4AX9LjdhB&_nc_ht=scontent.fceb2-2.fna&oh=bbfa502c342ea8b0e461d06201accbfc&oe=61D88417" alt="reviewer-photo">
+                            </div>
+                            <div class="review-content-container">
+                                <div class="reviewer-username">f.chord_girl</div>
+                                <p class="review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit minus laudantium 
+                                    labore sunt hic ab nostrum doloribus aliquid vitae! Ipsa, molestiae aspernatur. Qui ducimus optio 
+                                    praesentium veniam sed fugiat deleniti?</p>
+                                <div class="reacts">
+                                    <button><i class="bi bi-caret-up-fill"></i><p class="count">200</p></button>
+                                    <button><i class="bi bi-caret-down"></i><p class="count"></p></button>
+                                    <button>Reply</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviewer">
+                            <div class="review-photo-container">
+                                <img class="reviewer-photo" src="https://pyxis.nymag.com/v1/imgs/ba2/f85/099d4651e7c4a62bcba5da1fbc5c16be70-18-taylor-swift.rsquare.w1200.jpg" alt="reviewer-photo">
+                            </div>
+                            <div class="review-content-container">
+                                <div class="reviewer-username">taylorswift</div>
+                                <p class="review">And you call me up again just to break me like a promise, so casually cruel in the name of being honest. I'm a crumpled up piece of paper 
+                                    lying here, 'cause I remember it all, all, all too well</p>
+                                <div class="reacts">
+                                    <button><i class="bi bi-caret-up-fill"></i><p class="count">1M</p></button>
+                                    <button><i class="bi bi-caret-down"></i><p class="count"></p></button>
+                                    <button>Reply</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviewer">
+                            <div class="review-photo-container">
+                                <img class="reviewer-photo" src="https://www.biography.com/.image/t_share/MTE4MDAzNDEwNzk1MjAyMDYy/jake-gyllenhaal-16242387-1-402.jpg" alt="reviewer-photo">
+                            </div>
+                            <div class="review-content-container">
+                                <div class="reviewer-username">jakegyllenhaal</div>
+                                <p class="review">I have no words but a scarf.</p>
+                                <div class="reacts">
+                                    <button><i class="bi bi-caret-up-fill"></i><p class="count">5</p></button>
+                                    <button><i class="bi bi-caret-down"></i><p class="count">100K</p></button>
+                                    <button>Reply</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="episode-tab" id="episode-tab-div">
+                        <div class="season-selector">
+                            <select id="select" onchange="showSeason(this)">
+                                <option value="" disabled selected>Season</option>
+                                <option value="2">Season 2</option>
+                                <option value="1">Season 1</option>
+                            </select>
+                            <div class="season" id="season2">
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>01</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">THE PREMIERE</div>
+                                        <p>
+                                            Gabe forges an unholy alliance with Eden while Kinsey prepares for the premiere of 
+                                            the Savini Squad's horror film arrives. Duncan moves into Keyhouse with the rest of 
+                                            the Locke family while his fiancé Brian is staying in Tokyo for six months. Jackie 
+                                            starts forgetting the magic of the keys, as her eighteenth birthday is quickly 
+                                            approaching, which greatly concerns Tyler. 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>02</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">THE HEAD AND THE HEART</div>
+                                        <p>
+                                            Tyler grows concerned over Jackie's memory loss, Gabe probes the Lockes information 
+                                            about the keys, and Nina meets a mansplainer at her new job. Nina starts her new job 
+                                            renovating the school theater at Matheson Academy, where she meets history teacher 
+                                            Josh Bennett. Bode becomes friends with a new girl at school named Jamie, and he 
+                                            tells her about the keys. 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>03</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">SMALL WORLD</div>
+                                        <p>
+                                            Amid Duncan's unease over a new houseguest, Gabe drives a wedge between Kinsey and Scot while 
+                                            Bode finds an unusual key. Twenty-three years ago, a housekeeper 
+                                            at Keyhouse finds Erin using the Head Key and accidentally dislodges it, inadvertently 
+                                            trapping Erin inside of her own head. In the present, Erin moves into Keyhouse until her 
+                                            trust fund comes through.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>04</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">FORGET ME NOT</div>
+                                        <p>
+                                            With Duncan's emotional state deteriorating, Gabe confronts one of the Lockes, 
+                                            Tyler surprises Jackie on her birthday and Kinsey faces up to her fears. Duncan 
+                                            struggles to adjust to the return of his lost memories, resulting in extreme mood 
+                                            swings and hallucinations, causing the Lockes and Erin to realize that his best 
+                                            chance at a full recovery is to find the Memory Key.
+
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>05</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">PAST IS PROLOGUE</div>
+                                        <p>
+                                            Gabe insinuates himself into Tyler's search for the Memory Key as Kinsey 
+                                            resolves to find out what is going on with Eden. Bode visits an old friend while 
+                                            Gabe visits Keyhouse in search of the music box in order to force Kinsey to 
+                                            make his key for him. In the process, Gabe learns of their efforts to restore 
+                                            Duncan's memories and becomes interested in Duncan's ability to make keys. 
+
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>06</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">THE MAZE</div>
+                                        <p>
+                                            At the annual Winterfest celebration, Kinsey tries to play it cool around Gabe 
+                                            while a key found by Bode and Duncan may offer a way to take down Dodge. Gabe 
+                                            asks Kinsey and Tyler how things went with Duncan and the Memory Key, but they 
+                                            tell him the key did not work and that he should leave. Later, Bode comes back 
+                                            from Nebraska and tells Tyler and Kinsey that there were two Dodges on the night 
+                                            of the shadow attack.
+
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>07</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">BEST LAID PLANS</div>
+                                        <p>
+                                            Kinsey puts her acting skills to the test when the Lockes and their friends 
+                                            set a magical trap at the Keyhouse. Scot then arrives at Keyhouse, and the 
+                                            group discusses their plan  to defeat Dodge. Gabe and Eden arrive with the 
+                                            false impression that they will be filming the sequel to The Splattering, 
+                                            and while Gabe is filming  with Scot and Kinsey, Tyler uses the Anywhere 
+                                            Key on a nearby door to lead to the well house, where Gabe will be destroyed. 
+
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>08</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">IRONS IN THE FIRE</div>
+                                        <p>
+                                            As the origins of the Locke family magic come to light, Tyler and Kinsey 
+                                            look to protect their beloved ones from Gabe's expanding collections of pawns. 
+                                            In the present, the Lockes attempt to protect their remaining friends from 
+                                            Gabe as he uses his new Demon Key to turn people into demons. However, their 
+                                            efforts fail as Gabe turns Jackie into a demon. Tyler decides that they must 
+                                            craft a new key that can "unlock" the demon from a host's soul. 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>09</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">ALPHA AND OMEGA</div>
+                                        <p>
+                                            While Tyler works on a way to help Jackie, Gabe gives Kinsey a deadline to 
+                                            meet his demands. Eden manipulates Josh and a shaken Nina reaches out. Gabe 
+                                            visits Kinsey and threatens to kill Nina unless Kinsey willingly turns into 
+                                            a demon. Meanwhile, Eden manipulates Josh into going with her to the Black 
+                                            Door, and she kills Javi after catching him spying on her, taking the 
+                                            Anywhere Key from him. 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>10</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">CLIFFHANGER</div>
+                                        <p>
+                                            Escalating threats and devastating loss lead the Lockes into a ferocious showdown 
+                                            with Dodge. Back at the Keyhouse, Bode confronts a shocking visitor. While Tyler, 
+                                            Duncan, and Scot sneak into Gabe's house to steal the Demon Key, Kinsey refuses 
+                                            Gabe's offer and escapes with the Angel Key, which gives her wings. Tyler uses 
+                                            the Alpha Key to kill Mutuku and several other demons before Duncan discovers 
+                                            that, as the creator of the Demon Key, he can control the demons; 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="season" id="season1">
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>01</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">WELCOME TO MATHESON</div>
+                                        <p>
+                                            A man, after receiving a phone call, takes a key and inserts it 
+                                            in his chest, causing himself and his house to be incinerated. 
+                                            Three months later, the Locke family moved to Matheson, 
+                                            Massachusetts, after family patriarch Rendell's murder. Youngest Locke son Bode comes 
+                                            across the well house, where he hears the voice of a woman claiming 
+                                            to be his echo. 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>02</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">TRAPPER/KEEPER</div>
+                                        <p>
+                                            The Locke children find their mother has no recollection of being
+                                            trapped in the mirror dimension. At school, Tyler becomes interested 
+                                            in Jackie, while Kinsey struggles to fit in until she meets Scot and 
+                                            others of the "Savini squad", who are trying to make a budget horror 
+                                            film, and cautiously joins them. Bode fears that Echo may come back 
+                                            and bonds with Rufus, the young Keyhouse groundskeeper. 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>03</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">HEAD GAMES</div>
+                                        <p>
+                                            Tyler and Kinsey went Bode's mind, which resembles a fantastical 
+                                            arcade, and Bode shows them a memory of Rendell. Echo travels to the 
+                                            burned-down home where the man killed himself with a key, and she recovers 
+                                            the undamaged key. The next day, Tyler lets Kinsey use the Head Key to enter 
+                                            her mind, manifested as a distorted shopping mall, to find more memories of 
+                                            their father. 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>04</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">KEEPER OF THE KEYS</div>
+                                        <p>
+                                            Kinsey has become more open and engaging at school as she tells Tyler 
+                                            she had used the Head Key to take out the manifestation of her fear 
+                                            from her mind. Talking more with Ellie, Nina learns that most of Rendell's 
+                                            friends are dead, with Mark Cho recently killed in a house fire; outside 
+                                            of Ellie, only Erin Voss is alive, but she lives in a psychiatric facility. 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>05</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">FAMILY TREE</div>
+                                        <p>
+                                            Tyler and Kinsey are drawn to another hidden key, which they find is the Music 
+                                            Box Key that can only be used when inserted into a music box and allows the 
+                                            wielder to control a person's actions. Tyler warns Kinsey about abusing the 
+                                            keys' powers, not wanting to draw attention. As Tyler and Kinsey discovers 
+                                            about the Plant Key in the graveyard, they use it on a nearby tree and several 
+                                            jars are uprooted from the ground. 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>06</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">THE BLACK DOOR</div>
+                                        <p>
+                                            Kinsey confronts Duncan about the memories, but he has no recollection of 
+                                            any of the events, except vaguely remembering some caves near the shore line. 
+                                            Kinsey convinces the Savini squad to film in those caves as a pretext to 
+                                            explore further. Within, she finds a door in the shape of an omega symbol, 
+                                            known as the Black Door. 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>07</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">DISSECTION</div>
+                                        <p>
+                                            While waiting alone, Sam sees a picture of Keyhouse with Dodge taunting him 
+                                            to read Rendell's reports, which depict Sam as having mental-health issues. 
+                                            Feeling betrayed by the Lockes, it is implied this is what led to his murder 
+                                            of Rendell. Sam then takes the Lockes hostage, demanding they turn 
+                                            over the Head Key. Kinsey claims it is buried outside, directing him to where 
+                                            she buried her fear monster. 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>08</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">RAY OF F*CKING SUNSHINE</div>
+                                        <p>
+                                            Nina begins drinking in the wake of recent events, which causes her to start to 
+                                            remember some of the events involving the keys. She uses the Mending Key, which 
+                                            allows a cabinet to restore damaged objects to their original form. Tyler and Kinsey travel to 
+                                            the cave with the Black Door and find a list of the "Keepers of the Keys" written 
+                                            on the wall that includes Rendell and his friends. 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>09</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">ECHOES</div>
+                                        <p>
+                                            The Locke children confront Ellie about Lucas, and she explains that years prior, 
+                                            her boyfriend Lucas had been possessed by something that came through the Black 
+                                            Door and had killed two of their friends before Rendell killed him. Ellie and her 
+                                            friends hid all evidence of this, including removing Duncan's memories, and split 
+                                            up and hid the keys to prevent anyone from using them again. 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episode">
+                                    <div class="episode-number">
+                                        <span>10</span>
+                                    </div>
+                                    <div class="episode-synopsis">
+                                        <div class = "episode-title">CROWN OF SHADOWS</div>
+                                        <p>
+                                            The battle over the Omega Key leads to decisions that can't be undone — and a
+                                            dangerous door that promises plenty of trouble ahead. Now possessing both the
+                                            Shadow Key and the Crown of Shadows, Dodge is able to conjure powerful shadow 
+                                            monsters, and she sends them to attack Keyhouse in search of the Omega Key.
+                                            Tyler and Kinsey send her back through the Black Door with the help of Scot, 
+                                            Gabe, Jackie, and Eden. 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+    <script src="..\js\nav-scroll.js"></script>
+    <script src="..\js\series.js"></script>
+    <script src="..\js\webpages-js\two-season.js"></script>
+    <script src="..\js\modal.js"></script>
+</html>

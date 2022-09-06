@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
+
+.home-header{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    /* background-color: var(--dark); */
+}
+
+.nav-bar{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    padding: 5px 8%;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 1000px;
+    /* 100vw */
+    background-image: linear-gradient(180deg, rgb(0 0 0 / 67%), transparent);
+    transition: 500ms ease-in-out; 
+    z-index: 4;
+}
+
+/* navbar style after it crosses scroll trigger */
+.nav-bar-scrolled{
+    width: 100%;
+    position: fixed;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(180deg, rgb(0 0 0 / 80%), transparent);
+    backdrop-filter: blur(5px); 
+    transition: 200ms ease-in-out; 
+}
+
+
+/* Logo style */
+.logo{
+    font-family: 'Unica One', cursive;
+    font-weight: bolder;
+    font-size: 50px !important;
+    color: var(--dark-red) !important;
+    text-shadow: 2px 2px var(--mustard);
+}
+
+.nav-bar li, .nav-bar a, .nav-bar i{
+    color: var(--light);
+    text-decoration: none;
+    list-style: none;
+    font-size: 20px;
+    background: transparent;
+}
+
+.nav-bar p{
+    cursor: default;
+}
+
+.nav-bar .nav-list{
+    display: inline-flex;
+    gap: 100px;
+    padding: 0px 25px;
+    line-height: 50px;
+}
+
+.nav-bar .nav-list li{
+    font-weight: bolder;   
+}
+
+.nav-bar .search-box{
+    width: 260px;
+    padding: 5px;
+    display: flex;
+    gap: 6px;
+}
+
+/* Search box style *hidden* */
+.search-box #search-bar{
+    border-radius: 20px;
+    padding: 0px 10px;
+    line-height: 35px;
+    width: 0px;
+    outline-style: none;
+    border: none;
+    font-family: inherit;
+    font-weight: bold;
+    color: var(--dark);
+    display: block;
+    border-color: transparent;
+    background-color: transparent;
+    transition: 1s;
+    transition-delay: 1s;
+}
+
+/* Search box visible on hover */
+
+.search-box:hover > #search-bar, .search-box:focus-within > #search-bar{
+    width: 240px;
+    border-color: var(--light);
+    background-color: var(--light);
+    transition: 0.4s;
+}
+
+.search-box #search-button, .account-menu #account-menu-button{
+    background: none;
+    border: none;
+    outline-style: none;
+    cursor: pointer;
+}
+
+.search-box #search-button i, .account-menu #account-menu-button i{
+    color: var(--light);
+    font-size: 30px;
+}
+
+/* Arrow on Dropdown titles */
+.nav-list li:nth-child(3), .nav-list li:last-child{
+    position: relative;
+} 
+
+
+.nav-list .dropdown-title::before{
+    content: '';
+	position: absolute;
+	right: 0;
+	top: 51%;
+	width: 0;
+	height: 0;
+	border: 6px solid transparent;
+	border-left-color: var(--light);
+	border-right: 0;
+	margin-top: -6px;
+	transition: 0.09s;
+}
+
+.nav-list #title1::before{
+    margin-right: 74px;
+}
+
+.nav-list #title2::before{
+    margin-right: 47px;
+}
+
+.nav-list li:hover::before, 
+.nav-list li:focus-within::before{
+    transition: 0.2s;
+    transform: rotate(90deg);
+}
+
+/* Dropdown menu styles */
+
+.arrow-up{
+    position: absolute;
+    display: none;
+    top: 39px;
+    width: 0; 
+    height: 0; 
+    opacity: .6;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid var(--dark);
+}
+
+.nav-list #dropdown-menu1-arrow{
+    margin-left: 24px;
+}
+
+.nav-bar .dropdown{
+    position: absolute;
+    display: none;
+    background-color: var(--dark);
+    border-radius: 5px;
+    z-index: 1;
+    opacity: .6;
+    /* backdrop-filter: blur(10px);  */
+    max-height: 200px;
+    /* height: 0px; */
+    overflow-y: scroll;
+    margin-top: -1px;
+    box-shadow: 0px 12px 40px var(--dark);
+    transition: 500ms ease-in-out; 
+}
+
+.nav-list .dropdown::-webkit-scrollbar{
+    width: 6px;
+}
+
+.nav-list #dropdown-menu1{
+    margin-left: -39px;
+    width: 142px;
+}
+
+.nav-list .dropdown ul{
+    display: inline-flex;
+    flex-direction: column;
+    row-gap: 0px;
+    align-items: center;
+}
+
+.nav-list .dropdown ul li{
+    padding: 0 30px;
+    text-align: center;
+}
+
+.nav-bar .dropdown ul li a{
+    color: var(--text-light);
+    font-size: 15px;
+    font-style: normal;
+}
+
+.hr-text {
+    line-height: 1em;
+    position: relative;
+    outline: 0;
+    border: 0;
+    text-align: center;
+    height: 1.5em;
+    margin-top: 19px;
+    width: 85%;
+}
+.hr-text::before {
+    content: '';
+    background: var(--mustard);
+    position: absolute;
+    left: 0;
+    top: 44%;
+    width: 20px;
+    height: 2px;
+}
+.hr-text::after {
+    content: attr(data-content);
+    position: relative;
+    display: inline-block;
+    color: var(--dark);
+    font-size: 18px;
+    padding: 0 .5em;
+    line-height: 1.5em;
+    color: var(--mustard); 
+}
+
+.dropdown .dropdown-menu1-list li:nth-child(3){
+    margin-top: 10px;
+    line-height: 18px;
+}
+
+.dropdown .dropdown-menu1-list li:nth-child(3)::after{
+    content: '';
+    background: var(--mustard);
+    position: absolute;
+    left: 107px;
+    top: 72px;
+    width: 23px;
+    height: 2px;
+}
+
+.nav-list #dropdown-menu2-arrow{
+    margin-left: 12px;
+}
+
+.nav-list #dropdown-menu2{
+    margin-left: -28px;
+}
+
+.nav-list li:hover .dropdown, .nav-list li:focus-within .dropdown,
+.nav-list li:hover .arrow-up, 
+.account-menu:hover .dropdown, .account-menu:hover:focus-within .dropdown, 
+.account-menu:hover .arrow-up{
+    display: block;
+    /* height: 200px; */
+    transition: .3s ease-in-out;
+}
+
+/* Account menu style */
+.nav-bar .account-menu{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    width: 50px;
+    justify-content: center;
+}
+
+#dropdown-menu3-arrow{
+    margin-left: 5px;
+    margin-top: 14px;
+    opacity: .8;
+}
+
+.account-menu #dropdown-menu3{
+    margin-left: -103px;
+    margin-top: 11px;
+    max-height: 400px;
+    overflow: visible;
+    opacity: .8;
+}
+
+.account-menu #dropdown-menu3 ul{
+    display: inline-flex;
+    flex-direction: column;
+    row-gap: 12px;
+    align-items: flex-start;
+    padding: 15px 15px;
+    justify-content: center;
+}
+
+.account-menu #dropdown-menu3 ul li i{
+    font-size: 23px;
+    color: var(--mustard);
+    margin-right: 15px;
+}
+
+.account-menu ul #account-menu-contents-separator{
+    width: 100%;
+    color: var(--light);
+    background-color: var(--light);
+    margin-top: 9px;
+    border-color: var(--light);
+    align-self: center;
+}
