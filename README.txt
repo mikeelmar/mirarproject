@@ -7,4 +7,4 @@ LIPATA, Mike Elmar E.
 PECAYO, Cariel John S.
 
 <!--- NOTE --->
-This website requires internet connection to load its resources, including font. Furthremore, it is best experienced in maximized and 100% browser zoom.
+This website requires internet connection to load its resources, including font. Furthermore, it is best experienced in maximized and 100% browser zoom.
